@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://watchtrade24.de
+
+# Sitemaps
+Sitemap: https://watchtrade24.de/sitemap.xml
