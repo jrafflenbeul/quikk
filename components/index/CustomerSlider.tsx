@@ -80,7 +80,7 @@ const CustomerSlider = ({ customers }) => {
 							autoPlaySpeed={MAGIC_NUMBER_243 * MAGIC_NUMBER_24_3}
 							arrows={!mobile}
 						>
-							{[...customers, ...customers, ...customers].map(
+							{customers.map(
 								({ name, desc, url, image: { url: imageUrl } }, i) => {
 									return (
 										<ExternalLink key={i} href={url}>
