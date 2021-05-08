@@ -1,11 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import {
-	APPLICATION_NAME,
-	FOUNDER,
-	LANGUAGE,
-	PHONE,
-} from "../../constants";
+import { APPLICATION_NAME, LANGUAGE, PHONE } from "../../constants";
 import { LocalBusinessJsonLd } from "next-seo";
 
 const DefaultSEO = () => {
@@ -22,7 +17,6 @@ const DefaultSEO = () => {
 		"Uhr kaufen",
 		"Uhr verkaufen",
 		"München",
-		FOUNDER,
 	];
 	const url: string = "https://QUIKK.de";
 	const favicon: string = "/favicon.ico";
