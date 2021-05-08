@@ -1,6 +1,6 @@
 import { useTheme } from "@geist-ui/react";
 import React, { useEffect, useState } from "react";
-import { MENU_OPEN } from "../../../src/constants";
+import { MENU_OPEN } from "../../../constants";
 import getHeaderHeightInPx from "../../hooks/getHeaderHeightInPx";
 
 const MobileMenuWrapper = ({ visible: pVisible, children }) => {

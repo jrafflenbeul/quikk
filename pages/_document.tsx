@@ -1,6 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { CssBaseline } from "@geist-ui/react";
-import { APPLICATION_NAME, LANGUAGE, LOADING } from "../src/constants";
+import { APPLICATION_NAME, LANGUAGE, LOADING } from "../constants";
 
 class _document extends Document {
 	static async getInitialProps(ctx) {

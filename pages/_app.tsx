@@ -2,11 +2,13 @@ import React, { useEffect } from "react";
 import ThemeWrapper from "../components/theme/ThemeWrapper";
 import DefaultSEO from "../components/meta/DefaultSEO";
 import "inter-ui/inter.css";
+import "react-multi-carousel/lib/styles.css";
 import "../styles/globals.css";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import { CssBaseline } from "@geist-ui/react";
-import { LOADING } from "../src/constants";
+import { LOADING } from "../constants";
+import ContactRef from "../components/misc/ContactRef";
 
 const _app = ({ Component, pageProps }) => {
 	useEffect(() => {
@@ -19,11 +21,12 @@ const _app = ({ Component, pageProps }) => {
 	return (
 		<ThemeWrapper variant="dark">
 			<CssBaseline />
-			<Header />
+			<Header menuLeft={false} />
 			<DefaultSEO />
 			<main>
 				<Component {...pageProps} />
 			</main>
+			<ContactRef />
 			<Footer />
 		</ThemeWrapper>
 	);

@@ -1,9 +1,9 @@
 import { ButtonGroup, Button, useTheme } from "@geist-ui/react";
 import React from "react";
 import { Phone, Mail } from "@geist-ui/react-icons";
-import { EMAIL, PHONE } from "../../../src/constants";
-import { sanitizePhone } from "../../../src/utils";
+import { EMAIL, PHONE } from "../../../constants";
 import { useRouter } from "next/router";
+import { getMailToHref, getTelHref } from "../../../utils/contact";
 
 const CTA = ({ fit = true }: { fit?: boolean }) => {
 	const router = useRouter();
@@ -12,8 +12,7 @@ const CTA = ({ fit = true }: { fit?: boolean }) => {
 
 	return (
 		<ButtonGroup
-			type="secondary"
-			ghost
+			type="success-light"
 			style={{
 				border: 0,
 				margin: 0,
@@ -23,12 +22,12 @@ const CTA = ({ fit = true }: { fit?: boolean }) => {
 			<Button
 				icon={<Mail />}
 				auto
-				onClick={() => handleUrlClick(`mailto:${EMAIL}`)}
+				onClick={() => handleUrlClick(getMailToHref(EMAIL))}
 			/>
 			<Button
 				icon={<Phone />}
 				auto
-				onClick={() => handleUrlClick(`tel:${sanitizePhone(PHONE)}`)}
+				onClick={() => handleUrlClick(getTelHref(PHONE))}
 			/>
 		</ButtonGroup>
 	);

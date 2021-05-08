@@ -1,79 +1,101 @@
 import { Grid, useTheme } from "@geist-ui/react";
-import React, { ReactElement } from "react";
-import { GRID_GAP } from "../../src/constants";
-import ThemeWrapper from "../theme/ThemeWrapper";
-import {
-	Package,
-	Watch,
-	MessageCircle,
-	Lock,
-	Calendar,
-	Rewind,
-} from "@geist-ui/react-icons";
-import Service from "./Service";
+import React from "react";
 import Container from "../layout/Container";
+import ServiceCard from "./ServiceCard";
+import {
+	Layout,
+	Search,
+	Server,
+	Smartphone,
+	Code,
+	ShoppingBag,
+	Grid as GridIcon,
+	FastForward,
+	Compass,
+} from "@geist-ui/react-icons";
+import Title from "../misc/Title";
+import { GRID_GAP } from "../../constants";
+import ThemeWrapper from "../theme/ThemeWrapper";
 
 const Services = () => {
 	const theme = useTheme();
 
-	const SERVICES: Array<{
-		title: string;
-		icon: ReactElement;
-		content?: string;
-	}> = [
+	const services = [
 		{
-			title: "Professionelle Beratung",
-			icon: <MessageCircle />,
+			title: "Software",
 			content:
-				"Als unabhängiger Händler unterstützen wir Sie gerne bei der Suche nach einer passenden Uhr. Sprechen Sie uns bei Fragen einfach an. Wir freuen uns, Ihnen weiterhelfen zu können.",
+				"Maßgeschneiderte Softwarelösungen als Desktop- und Webanwendung.",
+			icon: <Code />,
 		},
 		{
-			title: "Echtheitsgarantie",
-			icon: <Watch />,
+			title: "Fullstack",
 			content:
-				"Direkt nach dem Eintreffen der Uhren werden sie durch unsere Experten in einer Reihe von Tests auf Echtheit geprüft. So sind Sie beim Kauf einer Uhr immer auf der sicheren Seite.",
+				"Ganzheitliche Anwendungen mit Nutzeroberfläche, Server und Datenbank.",
+			icon: <Server />,
 		},
 		{
-			title: "Sichere Zahlung",
-			icon: <Lock />,
-			content:
-				"Damit Sie den Kauf Ihrer Uhr sorgenfrei abschließen können, bieten wir Ihnen eine Reihe von Zahlungsmethoden an, zum Beispiel bequem per PayPal oder Banküberweisung.",
+			title: "Mobile Apps",
+			content: "Software für die Hosentasche. Mobile Apps für Android und iOS.",
+			icon: <Smartphone />,
 		},
 		{
-			title: "Versicherte Lieferung",
-			icon: <Package />,
-			content:
-				"Um sicherzustellen, dass Ihre Uhr wohlbehalten den Weg zu Ihnen nach Hause findet, arbeiten wir mit zuverlässigen Versanddienstleistern und Wertkurieren zusammen.",
+			title: "APIs",
+			content: "Schnittstellen für eine einfache Kommunikation Ihrer Systeme.",
+			icon: <GridIcon />,
 		},
 		{
-			title: "14 Tage Rückgaberecht",
-			icon: <Rewind />,
+			title: "E-Commerce",
 			content:
-				"Bei Nichtgefallen können Sie Ihre Uhr selbstverständlich innerhalb von 14 Tagen problemlos an uns zurückschicken und erhalten Ihr Geld zurück.",
+				"Eigene Bestell- und Buchungssysteme sowie eBay/mobile.de Anbindung.",
+			icon: <ShoppingBag />,
 		},
 		{
-			title: "1 Jahr Gewährleistung",
-			icon: <Calendar />,
+			title: "Prototyping",
 			content:
-				"Wir möchten, dass Sie so lange wie möglich Freude an Ihrer Uhr haben. Für die ersten zwölf Monate nach Kauf erhalten Sie von uns selbstverständlich eine Gewährleistung.",
+				"Wir überprüfen und bestätigen die Durchführbarkeit Ihres Vorhabens.",
+			icon: <Compass />,
+		},
+		{
+			title: "Webdesign",
+			content: "Ein Webauftritt, der genauso einzigartig ist, wie Sie selbst.",
+			icon: <Layout />,
+		},
+		{
+			title: "SEO",
+			content:
+				"Lassen Sie sich in den Weiten des World Wide Webs besser finden.",
+			icon: <Search />,
+		},
+		{
+			title: "Agilität",
+			content:
+				"Erste Ergebnisse liegen bereits nach einem 2-wöchigen Sprint vor.",
+			icon: <FastForward />,
 		},
 	];
 
 	return (
-		<ThemeWrapper
-			variant="light"
-			style={{
-				background: theme.palette.accents_8,
-				border: `1px solid ${theme.palette.accents_7}`,
-			}}
-		>
-			<Container spacing>
-				<Grid.Container gap={GRID_GAP}>
-					{SERVICES.map(({ title, icon, content }, i) => (
-						<Service {...{ title, icon, content }} key={i} />
-					))}
-				</Grid.Container>
-			</Container>
+		<ThemeWrapper variant="light">
+			<div
+				style={{
+					background: theme.palette.accents_8,
+					border: `1px solid ${theme.palette.accents_7}`,
+					borderWidth: "1px 0",
+				}}
+			>
+				<Container spacing>
+					<Grid.Container gap={GRID_GAP} alignItems="stretch">
+						<Grid xs={24}>
+							<Title h2 caps centered>
+								Unser Fokus
+							</Title>
+						</Grid>
+						{services.map((service, i) => (
+							<ServiceCard key={i} {...service} />
+						))}
+					</Grid.Container>
+				</Container>
+			</div>
 		</ThemeWrapper>
 	);
 };

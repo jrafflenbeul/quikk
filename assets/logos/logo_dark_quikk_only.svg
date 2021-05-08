@@ -1,0 +1,14 @@
+<svg id="quikk_software_logo" data-name="QUIKK Software Logo"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 455.17 117" title="QUIKK Software Logo">
+    <defs>
+        <style>.primary{fill:#21242D;}.accent{fill:#ff584f;}</style>
+    </defs>
+    <path class="primary" d="M489.93,489.16V435.72H512v52.62c0,18.14,7.91,25.63,21.27,25.63s21.27-7.49,21.27-25.63V435.72h21.81v53.44c0,28.09-16.09,43.63-43.22,43.63S489.93,517.25,489.93,489.16Z" transform="translate(-372.41 -434.08)"/>
+    <path class="primary" d="M595.46,435.72h22.08v95.43H595.46Z" transform="translate(-372.41 -434.08)"/>
+    <path class="primary" d="M672.21,493.66,659.4,507v24.13H637.45V435.72H659.4V480.3l42.26-44.58H726.2l-39.54,42.53,41.86,52.9H702.75Z" transform="translate(-372.41 -434.08)"/>
+    <path class="primary" d="M770.37,493.66,757.56,507v24.13H735.61V435.72h21.95V480.3l42.26-44.58h24.54l-39.54,42.53,41.86,52.9H800.91Z" transform="translate(-372.41 -434.08)"/>
+    <polygon class="accent" points="55.7 57.44 78.48 117.33 84.47 86.21 115.39 80.41 55.7 57.44"/>
+    <path class="primary" d="M432.75,513a32.49,32.49,0,0,1-8.12,1c-17,0-29.86-12.4-29.86-30.53s12.82-30.54,29.86-30.54,29.86,12.4,29.86,30.54a33.16,33.16,0,0,1-2.79,13.64l20.4,7.84a49.56,49.56,0,0,0,4.75-21.48c0-28.5-22.23-49.36-52.22-49.36s-52.22,21-52.22,49.36c0,23.41,15,41.82,37.28,47.55,5.38,1.34,17.23,3.42,29.93,0Z" transform="translate(-372.41 -434.08)"/>
+    <polyline class="primary" points="79.3 63.01 112.71 76 93.5 55.05"/>
+    <polyline class="primary" points="60.26 78.94 74.63 114.78 49 91.23"/>
+</svg>

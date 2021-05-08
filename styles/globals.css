@@ -25,6 +25,17 @@ ol {
 	color: inherit !important;
 }
 
-.legal * {
-	hyphens: auto;
+.btn {
+	text-transform: none !important;
+}
+
+.react-multiple-carousel__arrow--left::before,
+.react-multiple-carousel__arrow--right::before {
+	content: unset !important;
+}
+
+.react-multi-carousel-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }

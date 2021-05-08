@@ -5,7 +5,7 @@ import {
 	FOUNDER,
 	LANGUAGE,
 	PHONE,
-} from "../../src/constants";
+} from "../../constants";
 import { LocalBusinessJsonLd } from "next-seo";
 
 const DefaultSEO = () => {
@@ -24,7 +24,7 @@ const DefaultSEO = () => {
 		"München",
 		FOUNDER,
 	];
-	const url: string = "https://watchtrade24.de";
+	const url: string = "https://QUIKK.de";
 	const favicon: string = "/favicon.ico";
 
 	return (

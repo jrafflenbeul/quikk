@@ -3,7 +3,7 @@ import React, { useState, useRef } from "react";
 import { Menu, X } from "@geist-ui/react-icons";
 import MobileMenuWrapper from "./MobileMenuWrapper";
 import CTA from "./CTA";
-import { APPLICATION_NAME, HEADER_LINKS } from "../../../src/constants";
+import { APPLICATION_NAME, HEADER_LINKS } from "../../../constants";
 import InternalLink from "../../misc/InternalLink";
 
 const MobileNav = () => {

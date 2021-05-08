@@ -1,25 +1,31 @@
 import { Themes } from "@geist-ui/react";
 
-const accent = "#F5A623";
-
 const layout = {
 	radius: "0px",
 };
 
-export const WatchTrade24_light = Themes.createFromLight({
-	type: "WatchTrade24_light",
+const dark = "#21242D";
+const light = "#FFFFFF";
+const success = "#FF584F";
+
+export const QUIKK_light = Themes.createFromLight({
+	type: "QUIKK_light",
 	palette: {
-		success: accent,
-		selection: accent,
+		foreground: dark,
+		background: light,
+		success,
+		selection: success,
 	},
 	layout,
 });
 
-export const WatchTrade24_dark = Themes.createFromDark({
-	type: "WatchTrade24_dark",
+export const QUIKK_dark = Themes.createFromDark({
+	type: "QUIKK_dark",
 	palette: {
-		success: accent,
-		selection: accent,
+		foreground: light,
+		background: dark,
+		success,
+		selection: success,
 	},
 	layout,
 });

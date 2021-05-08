@@ -1,8 +1,8 @@
 import { useTheme } from "@geist-ui/react";
 import React from "react";
-import { GRID_GAP } from "../../src/constants";
+import { GRID_GAP } from "../../constants";
 
-const Container = ({ children, spacing = false, bread = false, ...props }) => {
+const Container = ({ children, spacing = false, ...props }) => {
 	const theme = useTheme();
 	const gapWithUnit = theme.layout.gap;
 	const multipliedGap = `${gapWithUnit} * ${GRID_GAP}`;
@@ -13,23 +13,19 @@ const Container = ({ children, spacing = false, bread = false, ...props }) => {
 			<style jsx>{`
 				.quikkontainer {
 					height: 100%;
-					width: ${bread ? "unset" : "100%"};
+					width: 100%;
 					padding: ${spacing ? `calc(${multipliedGap})` : 0} ${gapWithUnit};
 					margin-right: auto;
 					margin-left: auto;
 				}
 				@media (max-width: 575px) {
 					.quikkontainer {
-						max-width: ${bread
-							? "none"
-							: `calc(100vw - ${multipliedGap}) !important`};
+						max-width: calc(100vw - ${multipliedGap}) !important;
 					}
 				}
 				@media (min-width: 576px) {
 					.quikkontainer {
-						max-width: ${bread
-							? "none"
-							: `calc(540px - ${multipliedGap}) !important`};
+						max-width: calc(540px - ${multipliedGap}) !important;
 					}
 				}
 				@media (min-width: 768px) {

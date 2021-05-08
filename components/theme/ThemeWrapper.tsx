@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 import { GeistProvider, useTheme } from "@geist-ui/react";
-import { WatchTrade24_light, WatchTrade24_dark } from "../../themes";
+import { QUIKK_light, QUIKK_dark } from "../../themes";
 
 const ThemeWrapper = ({
 	children,
@@ -14,10 +14,10 @@ const ThemeWrapper = ({
 	const theme = useTheme();
 	return (
 		<GeistProvider
-			themes={[WatchTrade24_light, WatchTrade24_dark]}
-			themeType={`WatchTrade24_${variant}`}
+			themes={[QUIKK_light, QUIKK_dark]}
+			themeType={`QUIKK_${variant}`}
 		>
-			<div
+			<section
 				style={{
 					background:
 						theme.palette[variant === "dark" ? "background" : "foreground"],
@@ -28,7 +28,7 @@ const ThemeWrapper = ({
 				{...props}
 			>
 				{children}
-			</div>
+			</section>
 		</GeistProvider>
 	);
 };

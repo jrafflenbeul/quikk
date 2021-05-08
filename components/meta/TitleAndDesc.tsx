@@ -1,7 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
-import { APPLICATION_NAME, FOOTER_LINK_SEPARATOR } from "../../src/constants";
+import { APPLICATION_NAME, FOOTER_LINK_SEPARATOR } from "../../constants";
 
 const TitleAndDesc = ({
 	title = "",

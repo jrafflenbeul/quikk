@@ -1,8 +1,8 @@
 import { useTheme } from "@geist-ui/react";
 import React from "react";
-import { MAGIC_NUMBER_42 } from "../../src/constants";
+import { MAGIC_NUMBER_42 } from "../../constants";
 
-const Divider = ({ style = {} }) => {
+const Divider = ({ style = {}, center = true, huge = false }) => {
 	const theme = useTheme();
 	return (
 		<div className="wrapper">
@@ -11,7 +11,7 @@ const Divider = ({ style = {} }) => {
 				.divider {
 					width: ${MAGIC_NUMBER_42}px;
 					height: 2px;
-					margin: ${theme.layout.gapQuarter} 0;
+					margin: ${huge ? theme.layout.gap : theme.layout.gapHalf} 0;
 					background-color: ${theme.palette.success};
 				}
 				.wrapper {
@@ -19,7 +19,7 @@ const Divider = ({ style = {} }) => {
 					display: flex;
 					flex-direction: column;
 					align-items: center;
-					justify-content: center;
+					align-items: ${center ? "center" : "start"};
 				}
 			`}</style>
 		</div>

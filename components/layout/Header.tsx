@@ -1,16 +1,18 @@
-import { Text, Grid, useTheme } from "@geist-ui/react";
+import { Text, Grid, useTheme, Image } from "@geist-ui/react";
 import React from "react";
 import isMobile from "../hooks/isMobile";
 import Container from "./Container";
 import ThemeWrapper from "../theme/ThemeWrapper";
-import { MAGIC_NUMBER_99 } from "../../src/constants";
+import { MAGIC_NUMBER_99 } from "../../constants";
 import DesktopNav from "./header/DesktopNav";
 import MobileNav from "./header/MobileNav";
 import InternalLink from "../misc/InternalLink";
+import quikk from "../../assets/logos/logo_light_quikk_only.svg";
 
-const Header = () => {
+const Header = ({ menuLeft = true }: { menuLeft?: boolean }) => {
 	const mobile = isMobile();
 	const theme = useTheme();
+	const logoHeightInEm = mobile ? 2 : 1.5;
 
 	return (
 		<header
@@ -19,21 +21,17 @@ const Header = () => {
 				top: 0,
 				width: "100%",
 				zIndex: MAGIC_NUMBER_99,
-				boxShadow: "rgb(0 0 0 / 10%) 0px 0px 15px 0px",
 			}}
 		>
-			<ThemeWrapper variant="light">
+			<ThemeWrapper variant="dark">
 				<Container
 					style={{
-						padding: `${theme.layout.gapHalf}`,
-						paddingLeft: mobile ? theme.layout.gapHalf : 0,
-						paddingRight: mobile ? theme.layout.gapHalf : 0,
+						padding: `${theme.layout.gapHalf} 0`,
 					}}
-					bread
 				>
 					<Grid.Container direction="row" alignItems="center" justify="center">
 						<Grid xs md={0}>
-							<MobileNav />
+							{menuLeft && <MobileNav />}
 						</Grid>
 						<Grid
 							xs
@@ -41,18 +39,20 @@ const Header = () => {
 							justify={mobile ? "center" : null}
 						>
 							<InternalLink href="/">
-								<Text span b>
-									Watch
-								</Text>
-								<Text span b type="secondary">
-									Trade
-								</Text>
-								<Text span b type="success">
-									24
-								</Text>
+								<img
+									src={quikk}
+									alt="QUIKK Software Logo"
+									title="QUIKK Software Logo"
+									style={{
+										height: `${logoHeightInEm}em`,
+										marginTop: `${logoHeightInEm / 6}em`,
+									}}
+								/>
 							</InternalLink>
 						</Grid>
-						<Grid xs md={0} />
+						<Grid xs md={0} justify={menuLeft ? null : "flex-end"}>
+							{!menuLeft && <MobileNav />}
+						</Grid>
 						<Grid xs={0} md justify="flex-end" alignItems="center">
 							<DesktopNav />
 						</Grid>

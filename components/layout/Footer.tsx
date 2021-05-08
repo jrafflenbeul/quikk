@@ -1,100 +1,48 @@
-import { Text, Grid, useTheme, Description, Spacer } from "@geist-ui/react";
+import { Text, Grid, useTheme, Description } from "@geist-ui/react";
 import React from "react";
-import {
-	APPLICATION_NAME,
-	EMAIL,
-	FOOTER_LINKS,
-	FOOTER_LINK_SEPARATOR,
-	MAGIC_NUMBER_42,
-	PHONE,
-} from "../../src/constants";
-import InternalLink from "../misc/InternalLink";
+import { APPLICATION_NAME, GRID_GAP, SMALL_GAP } from "../../constants";
 import ThemeWrapper from "../theme/ThemeWrapper";
-import { Phone, Mail } from "@geist-ui/react-icons";
-import { sanitizePhone } from "../../src/utils";
+import LocationLinks from "./footer/LocationLinks";
+import LegalLinks from "./footer/LegalLinks";
+import ContactLinks from "./footer/ContactLinks";
+import CompanyLinks from "./footer/CompanyLinks";
+import SocialLinks from "./footer/SocialLinks";
+import Container from "./Container";
 
 const Footer = () => {
 	const theme = useTheme();
 
-	const LegalLinks = () => (
-		<Description
-			title={
-				<Text span style={{ width: "100%", textAlign: "center" }}>
-					Rechtliches
-				</Text>
-			}
-			content={
-				<Text p>
-					{Object.entries(FOOTER_LINKS).map(([key, value], i) => (
-						<span key={i}>
-							{i !== 0 && (
-								<Text span type="secondary">
-									{FOOTER_LINK_SEPARATOR}
-								</Text>
-							)}
-							<InternalLink href={value}>{key}</InternalLink>
-						</span>
-					))}
-				</Text>
-			}
-		/>
-	);
-
-	const ContactLinks = () => (
-		<Description
-			title={
-				<Text span style={{ width: "100%", textAlign: "center" }}>
-					Kontakt
-				</Text>
-			}
-			content={
-				<>
-					<Text
-						p
-						style={{
-							display: "flex",
-							flexDirection: "row",
-							alignItems: "center",
-							justifyContent: "center",
-						}}
-					>
-						<Mail size="1em" />
-						<Spacer inline x={MAGIC_NUMBER_42 / 100} />
-						<InternalLink href={`mailto:${EMAIL}`}>{EMAIL}</InternalLink>
-					</Text>
-					<Text
-						p
-						style={{
-							display: "flex",
-							flexDirection: "row",
-							alignItems: "center",
-							justifyContent: "center",
-						}}
-					>
-						<Phone size="1em" />
-						<Spacer inline x={MAGIC_NUMBER_42 / 100} />
-						<InternalLink href={`tel:${sanitizePhone(PHONE)}`}>
-							{PHONE}
-						</InternalLink>
-					</Text>
-				</>
-			}
-		/>
-	);
+	const contents = [
+		{ title: "Rechtliches", content: <LegalLinks /> },
+		{ title: "Kontakt", content: <ContactLinks /> },
+		{ title: "Unternehmen", content: <CompanyLinks /> },
+		{ title: "Social", content: <SocialLinks /> },
+		{ title: "Vor Ort", content: <LocationLinks /> },
+	];
 
 	return (
 		<footer>
 			<ThemeWrapper variant="dark">
+				<Container spacing>
+					<Grid.Container gap={SMALL_GAP}>
+						{contents.map(({ title, content }, i) => (
+							<Grid key={i} xs={12} md={24 / contents.length}>
+								<Description {...{ title, content }} />
+							</Grid>
+						))}
+						<Grid xs={0} md={24}>
+							<Text small type="secondary">
+								Wir bei QUIKK Software & Webdesign UG (haftungsbeschränkt)
+								entwickeln seit Oktober 2020 individuelle Software, attraktive
+								Webdesigns und mobile Apps in Minden und liefern Ihnen
+								maßgeschneiderte Lösungen für digitale Herausforderungen. Wir
+								sind ein junges und agiles Tech-Startup mit Fokus auf Qualität
+								und Transparenz.
+							</Text>
+						</Grid>
+					</Grid.Container>
+				</Container>
 				<Grid.Container>
-					<Spacer inline />
-					<Grid xs={24} alignItems="center" justify="center">
-						<ContactLinks />
-					</Grid>
-					<Spacer inline />
-					<Grid xs={24} alignItems="center" justify="center">
-						<LegalLinks />
-					</Grid>
-					<Spacer inline />
 					<Grid
 						xs={24}
 						style={{ backgroundColor: theme.palette.accents_1 }}

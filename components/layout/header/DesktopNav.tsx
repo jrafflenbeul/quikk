@@ -2,7 +2,7 @@ import { Tabs } from "@geist-ui/react";
 import React from "react";
 import { useRouter } from "next/router";
 import CTA from "./CTA";
-import { HEADER_LINKS } from "../../../src/constants";
+import { HEADER_LINKS } from "../../../constants";
 
 const DesktopNav = () => {
 	const router = useRouter();

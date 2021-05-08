@@ -1,5 +1,5 @@
 module.exports = {
-	siteUrl: "https://watchtrade24.de",
+	siteUrl: "https://QUIKK.de",
 	generateRobotsTxt: true,
 	// ...other options
 };
