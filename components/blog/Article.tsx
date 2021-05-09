@@ -41,13 +41,13 @@ const Article = ({
 						<Grid xs={24} sm={24} md={16} direction="column">
 							<Grid.Container>
 								<TextWithIcon icon={<Calendar />}>
-									<Text type="secondary" small span>
+									<Text type="secondary" small>
 										{new Date(published_at).toLocaleDateString()}
 									</Text>
 								</TextWithIcon>
 								<Spacer />
 								<TextWithIcon icon={<Clock />}>
-									<Text type="secondary" small span>
+									<Text type="secondary" small>
 										{getReadingTimeInMinutes(content)} min
 									</Text>
 								</TextWithIcon>
@@ -56,7 +56,7 @@ const Article = ({
 							<Title h4 caps>
 								{title}
 							</Title>
-							<Text p type="secondary">
+							<Text p type="secondary" small>
 								{getPreviewText(content)}
 							</Text>
 							<Spacer />

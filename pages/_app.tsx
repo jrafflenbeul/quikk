@@ -3,6 +3,7 @@ import ThemeWrapper from "../components/theme/ThemeWrapper";
 import DefaultSEO from "../components/meta/DefaultSEO";
 import "inter-ui/inter.css";
 import "react-multi-carousel/lib/styles.css";
+import "devicon/devicon.min.css";
 import "../styles/globals.css";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";

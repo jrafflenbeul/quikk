@@ -1,7 +1,12 @@
 import { Button, Grid, Text, useTheme } from "@geist-ui/react";
 import { useRouter } from "next/router";
 import React from "react";
-import { LARGE_GAP } from "../../constants";
+import {
+	DATENSCHUTZ_LINK,
+	IMPRESSUM_LINK,
+	KONTAKT_LINK,
+	LARGE_GAP,
+} from "../../constants";
 import isMobile from "../hooks/isMobile";
 import Container from "../layout/Container";
 import ThemeWrapper from "../theme/ThemeWrapper";
@@ -12,13 +17,13 @@ const ContactRef = () => {
 	const router = useRouter();
 	const theme = useTheme();
 	const mobile = isMobile();
-	const excludePathnames = ["/kontakt", "/impressum", "/datenschutzerklaerung"];
+	const excludePathnames = [KONTAKT_LINK, IMPRESSUM_LINK, DATENSCHUTZ_LINK];
 	const displayContactRef = excludePathnames.every(
 		(pathname) => pathname !== router.pathname,
 	);
 
 	const Cta = () => (
-		<InternalLink href="/kontakt" style={{ width: mobile ? "100%" : null }}>
+		<InternalLink href={KONTAKT_LINK} style={{ width: mobile ? "100%" : null }}>
 			<Button type="success-light" style={{ width: mobile ? "100%" : null }}>
 				Kontakt aufnehmen
 			</Button>

@@ -1,18 +1,10 @@
-import {
-	Card,
-	Description,
-	Display,
-	Grid,
-	Text,
-	useTheme,
-} from "@geist-ui/react";
+import { Card, Display, Grid } from "@geist-ui/react";
 import React from "react";
 import InternalLink from "../misc/InternalLink";
-import Divider from "../misc/Divider";
 import { MAGIC_NUMBER_42 } from "../../constants";
+import TitleAndSubtitle from "../misc/TitleAndSubtitle";
 
 const ServiceCard = ({ title, content, icon }) => {
-	const theme = useTheme();
 	return (
 		<Grid xs={24} sm={12} md={8} alignItems="stretch">
 			<InternalLink>
@@ -30,38 +22,17 @@ const ServiceCard = ({ title, content, icon }) => {
 				>
 					<Display
 						caption={
-							<Description
-								title={
-									<Text
-										h3
-										style={{
-											textAlign: "center",
-											width: "100%",
-											color: theme.palette.foreground,
-											fontWeight: "bold",
-										}}
-									>
-										{title}
-									</Text>
-								}
-								content={
-									<>
-										<Divider />
-										<Text
-											p
-											small={false}
-											style={{ fontWeight: "normal" }}
-											type="secondary"
-										>
-											{content}
-										</Text>
-									</>
-								}
-								style={{
-									textAlign: "center",
-									justifyContent: "center",
-									alignItems: "center",
+							<TitleAndSubtitle
+								title={title}
+								titleProps={{
+									h1: false,
+									h3: true,
+									caps: true,
+									centered: true,
 								}}
+								dividerProps={{ center: true }}
+								desc={content}
+								grid={false}
 							/>
 						}
 					>

@@ -1,4 +1,5 @@
 import React from "react";
+import { DATENSCHUTZ_LINK, IMPRESSUM_LINK } from "../../../constants";
 import InternalLink from "../../misc/InternalLink";
 import Links from "./Links";
 
@@ -6,8 +7,8 @@ const LegalLinks = () => {
 	return (
 		<Links
 			content={[
-				<InternalLink href="/impressum">Impressum</InternalLink>,
-				<InternalLink href="/datenschutz">Datenschutz</InternalLink>,
+				<InternalLink href={IMPRESSUM_LINK}>Impressum</InternalLink>,
+				<InternalLink href={DATENSCHUTZ_LINK}>Datenschutz</InternalLink>,
 			]}
 		/>
 	);

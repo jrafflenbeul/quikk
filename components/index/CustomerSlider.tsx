@@ -92,6 +92,7 @@ const CustomerSlider = ({ customers }) => {
 												style={{
 													maxWidth: `${MAGIC_NUMBER_243}px`,
 												}}
+												key={i}
 											/>
 										</ExternalLink>
 									);

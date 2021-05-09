@@ -5,7 +5,7 @@ import {
 	ExternalLinkWithIcon,
 	InternalLinkWithIcon,
 } from "../../misc/WithIconHelper";
-import { EMAIL, PHONE } from "../../../constants";
+import { EMAIL, KONTAKT_LINK, PHONE } from "../../../constants";
 import { getMailToHref, getTelHref } from "../../../utils/contact";
 
 const ContactLinks = () => {
@@ -18,7 +18,7 @@ const ContactLinks = () => {
 				<ExternalLinkWithIcon href={getTelHref(PHONE)} icon={<Phone />}>
 					{PHONE}
 				</ExternalLinkWithIcon>,
-				<InternalLinkWithIcon href="/kontakt" icon={<Send />}>
+				<InternalLinkWithIcon href={KONTAKT_LINK} icon={<Send />}>
 					Kontaktformular
 				</InternalLinkWithIcon>,
 			]}

@@ -25,6 +25,11 @@ ol {
 	color: inherit !important;
 }
 
+dt {
+	white-space: break-spaces !important;
+	height: unset !important;
+}
+
 .btn {
 	text-transform: none !important;
 }

@@ -5,10 +5,9 @@ import Hero from "../components/index/Hero";
 import Introduction from "../components/index/Introduction";
 import ProjectPreview from "../components/index/ProjectPreview";
 import Services from "../components/index/Services";
-import Work from "../components/index/Work";
 import TitleAndDesc from "../components/meta/TitleAndDesc";
 import Values from "../components/misc/Values";
-import WorkProcess from "../components/misc/WorkProcess";
+import Work from "../components/misc/Work";
 import { SEPARATOR } from "../constants";
 import { getArticles, getCustomers } from "../utils/strapi";
 
@@ -26,7 +25,6 @@ const index = ({ articles, customers }) => {
 			<CustomerSlider customers={customers} />
 			<ProjectPreview articles={articles} />
 			<Work />
-			<WorkProcess />
 			<BlogPreview articles={articles} />
 		</>
 	);

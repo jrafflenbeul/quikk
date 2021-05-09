@@ -1,6 +1,6 @@
 import { Grid } from "@geist-ui/react";
 import React from "react";
-import { LARGE_GAP } from "../../constants";
+import { KONTAKT_LINK, LARGE_GAP } from "../../constants";
 import Container from "../layout/Container";
 import joyce from "../../assets/images/joyce_landing.jpg";
 import minden from "../../assets/images/minden.jpg";
@@ -28,7 +28,7 @@ const Introduction = () => {
 						revert={true}
 						alt="Minden (Ostwestfalen), NRW: QUIKK Software Standort Hahler Straße 285, 32427 Minden"
 						cta="Einen Termin vereinbaren"
-						ctaHref="/kontakt"
+						ctaHref={KONTAKT_LINK}
 					/>
 					<IntroductionSection
 						src={code}
