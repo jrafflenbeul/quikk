@@ -6,7 +6,7 @@ const Title = ({
 	children,
 	centered = false,
 	caps = false,
-	split = true,
+	color = false,
 	...props
 }) => {
 	const theme = useTheme();
@@ -21,13 +21,13 @@ const Title = ({
 				lineHeight: 1,
 				margin: isHeading ? 0 : null,
 				overflowWrap: "break-word",
-				wordWrap: split ? "break-word" : null,
-				wordBreak: split ? "break-word" : null,
-				whiteSpace: split ? "break-spaces" : null,
+				wordWrap: "break-word",
+				wordBreak: "break-word",
+				whiteSpace: "break-spaces",
 				hyphens: "auto",
 				fontSize: mobile && isHeading ? "175%" : null,
 				fontWeight: caps ? "bold" : null,
-				color: theme.palette.foreground,
+				color: color ? theme.palette.foreground : null,
 			}}
 			{...props}
 		>

@@ -7,19 +7,14 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 	const {
 		method,
 		body: { name, email, message },
-		headers: { host },
 	} = req;
 
 	switch (method) {
 		case "POST":
 			try {
-				if (host === "quikk.de" || host === "quikk-software.de") {
-					const mailInfo = await sendMail({ name, email, message });
-					res.statusCode = 200;
-					res.json({ mailInfo });
-				} else {
-					throw new Error();
-				}
+				const mailInfo = await sendMail({ name, email, message });
+				res.statusCode = 200;
+				res.json({ mailInfo });
 			} catch (error) {
 				res.statusCode = 500;
 				res.send(`${error}`);

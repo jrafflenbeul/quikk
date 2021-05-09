@@ -8,7 +8,7 @@ import { getJobs } from "../utils/strapi";
 import ExternalLink from "../components/misc/ExternalLink";
 import CarrerCard from "../components/karriere/CarrerCard";
 import { EMAIL, GRID_GAP } from "../constants";
-import { getMailToHref } from "../utils/contact";
+import { getMailToHref } from "../utils/kontakt";
 
 const kontakt = ({ jobs }) => {
 	const title = "Karriere";

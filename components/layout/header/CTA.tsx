@@ -3,7 +3,7 @@ import React from "react";
 import { Phone, Mail } from "@geist-ui/react-icons";
 import { EMAIL, PHONE } from "../../../constants";
 import { useRouter } from "next/router";
-import { getMailToHref, getTelHref } from "../../../utils/contact";
+import { getMailToHref, getTelHref } from "../../../utils/kontakt";
 
 const CTA = ({ fit = true }: { fit?: boolean }) => {
 	const router = useRouter();

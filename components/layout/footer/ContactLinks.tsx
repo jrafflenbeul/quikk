@@ -6,7 +6,7 @@ import {
 	InternalLinkWithIcon,
 } from "../../misc/WithIconHelper";
 import { EMAIL, KONTAKT_LINK, PHONE } from "../../../constants";
-import { getMailToHref, getTelHref } from "../../../utils/contact";
+import { getMailToHref, getTelHref } from "../../../utils/kontakt";
 
 const ContactLinks = () => {
 	return (

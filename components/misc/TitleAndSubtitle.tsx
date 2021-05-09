@@ -1,4 +1,4 @@
-import { Grid, Description, useTheme } from "@geist-ui/react";
+import { Grid, Description } from "@geist-ui/react";
 import React from "react";
 import Divider from "./Divider";
 import Title from "./Title";
@@ -11,7 +11,6 @@ const TitleAndSubtitle = ({
 	dividerProps = {},
 	grid = true,
 }) => {
-	const theme = useTheme();
 	return grid ? (
 		<Grid direction="column" {...gridProps} xs={24}>
 			<Title h1 caps {...titleProps}>

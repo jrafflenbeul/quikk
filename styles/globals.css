@@ -21,7 +21,9 @@ header .tabs .content {
 }
 
 ul,
-ol {
+ol,
+pre,
+code {
 	color: inherit !important;
 }
 
@@ -32,6 +34,10 @@ dt {
 
 .btn {
 	text-transform: none !important;
+}
+
+.auto-margin * {
+	margin: 0 !important;
 }
 
 .react-multiple-carousel__arrow--left::before,

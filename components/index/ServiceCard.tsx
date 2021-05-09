@@ -3,11 +3,12 @@ import React from "react";
 import InternalLink from "../misc/InternalLink";
 import { MAGIC_NUMBER_42 } from "../../constants";
 import TitleAndSubtitle from "../misc/TitleAndSubtitle";
+import { createLeistungenHrefFromId } from "../../utils/leistungen";
 
-const ServiceCard = ({ title, content, icon }) => {
+const ServiceCard = ({ title, content, icon, id = null }) => {
 	return (
 		<Grid xs={24} sm={12} md={8} alignItems="stretch">
-			<InternalLink>
+			<InternalLink href={createLeistungenHrefFromId(id)}>
 				<Card
 					hoverable
 					shadow
@@ -29,6 +30,7 @@ const ServiceCard = ({ title, content, icon }) => {
 									h3: true,
 									caps: true,
 									centered: true,
+									color: true,
 								}}
 								dividerProps={{ center: true }}
 								desc={content}

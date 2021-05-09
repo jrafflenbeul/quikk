@@ -53,9 +53,7 @@ const Article = ({
 								</TextWithIcon>
 							</Grid.Container>
 							<Spacer />
-							<Title h4 caps>
-								{title}
-							</Title>
+							<Title h4>{title}</Title>
 							<Text p type="secondary" small>
 								{getPreviewText(content)}
 							</Text>

@@ -20,7 +20,7 @@ import axios from "axios";
 import InternalLink from "../components/misc/InternalLink";
 import { GRID_GAP, SMALL_GAP } from "../constants";
 import ThemeWrapper from "../components/theme/ThemeWrapper";
-import { getMailToHref, getTelHref } from "../utils/contact";
+import { getMailToHref, getTelHref } from "../utils/kontakt";
 import TitleAndSubtitle from "../components/misc/TitleAndSubtitle";
 
 const kontakt = () => {

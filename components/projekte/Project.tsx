@@ -1,0 +1,58 @@
+import { Card, Grid, Image, Button, Text, Badge } from "@geist-ui/react";
+import { ExternalLink as ExternalIcon } from "@geist-ui/react-icons";
+import React from "react";
+import ReactMarkdown from "react-markdown";
+import { GRID_GAP, SMALL_GAP } from "../../constants";
+import isMobile from "../hooks/isMobile";
+import ExternalLink from "../misc/ExternalLink";
+import Title from "../misc/Title";
+
+const Project = ({ name = "", desc = "", url = "", image }) => {
+	const mobile = isMobile();
+	const { url: src } = image[0] ?? { url: "" };
+
+	return (
+		<Grid xs={24}>
+			<Card style={{ width: "100%" }} width="100%">
+				<Grid.Container
+					direction={mobile ? "column-reverse" : "row"}
+					gap={GRID_GAP}
+				>
+					<Grid xs={24} sm={24} md={16} direction="column">
+						<Title h4>{name}</Title>
+						<Text p type="secondary" small>
+							<ReactMarkdown>{desc}</ReactMarkdown>
+						</Text>
+					</Grid>
+					<Grid xs={24} sm={24} md={8}>
+						<Image alt={name} src={src} />
+					</Grid>
+				</Grid.Container>
+				<Card.Footer>
+					<Grid.Container
+						gap={SMALL_GAP}
+						alignItems={mobile ? "center" : null}
+						justify={mobile ? "center" : null}
+					>
+						{/* <Grid>
+							<Badge type="success">Success</Badge>
+						</Grid>
+						*/}
+						<Grid xs={24}>
+							<ExternalLink
+								href={url}
+								style={{ width: mobile ? "100%" : null }}
+							>
+								<Button style={{ width: mobile ? "100%" : null }} ghost>
+									{name} ansehen <ExternalIcon />
+								</Button>
+							</ExternalLink>
+						</Grid>
+					</Grid.Container>
+				</Card.Footer>
+			</Card>
+		</Grid>
+	);
+};
+
+export default Project;

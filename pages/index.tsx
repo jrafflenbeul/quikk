@@ -9,9 +9,9 @@ import TitleAndDesc from "../components/meta/TitleAndDesc";
 import Values from "../components/misc/Values";
 import Work from "../components/misc/Work";
 import { SEPARATOR } from "../constants";
-import { getArticles, getCustomers } from "../utils/strapi";
+import { getArticles, getCustomers, getProjects } from "../utils/strapi";
 
-const index = ({ articles, customers }) => {
+const index = ({ articles, customers, projects }) => {
 	return (
 		<>
 			<TitleAndDesc
@@ -23,7 +23,7 @@ const index = ({ articles, customers }) => {
 			<Values />
 			<Services />
 			<CustomerSlider customers={customers} />
-			<ProjectPreview articles={articles} />
+			<ProjectPreview projects={projects} />
 			<Work />
 			<BlogPreview articles={articles} />
 		</>
@@ -35,9 +35,14 @@ export default index;
 export async function getStaticProps() {
 	const articles = await getArticles();
 	const customers = await getCustomers();
+	const projects = await getProjects();
 	const articlesToShowInPreview = 3;
 	return {
-		props: { articles: articles.slice(0, articlesToShowInPreview), customers },
+		props: {
+			articles: articles.slice(0, articlesToShowInPreview),
+			customers,
+			projects: projects.slice(0, articlesToShowInPreview),
+		},
 		revalidate: 1,
 	};
 }

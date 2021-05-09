@@ -3,12 +3,12 @@ import { Grid, Button } from "@geist-ui/react";
 import Container from "../layout/Container";
 import { GRID_GAP } from "../../constants";
 import Title from "../misc/Title";
-import Article from "../blog/Article";
 import InternalLink from "../misc/InternalLink";
 import isMobile from "../hooks/isMobile";
 import ThemeWrapper from "../theme/ThemeWrapper";
+import Project from "../projekte/Project";
 
-const ProjectPreview = ({ articles }) => {
+const ProjectPreview = ({ projects }) => {
 	const mobile = isMobile();
 	return (
 		<ThemeWrapper>
@@ -16,11 +16,11 @@ const ProjectPreview = ({ articles }) => {
 				<Grid.Container gap={GRID_GAP}>
 					<Grid xs={24}>
 						<Title h2 centered caps>
-							Unsere Projekte
+							Aktuelle Projekte
 						</Title>
 					</Grid>
-					{articles.map((article, i) => (
-						<Article {...article} key={i} />
+					{projects.map((project, i) => (
+						<Project {...project} key={i} />
 					))}
 					<Grid xs={24} sm={24} md alignItems="center" justify="center">
 						<InternalLink

@@ -18,8 +18,8 @@ const fetch = async (path) => {
 };
 
 const sortByDisplayAsc = (a, b) => a.display - b.display;
-const sortByPublishedAt = (a, b) =>
-	String(b.published_at).localeCompare(String(a.published_at));
+const sortByUpdatedAt = (a, b) =>
+	String(b.updatedAt).localeCompare(String(a.updatedAt));
 const sortByNameAsc = (a, b) => String(a.name).localeCompare(String(b.name));
 
 export const getColleagues = async () => {
@@ -34,7 +34,7 @@ export const getJobs = async () => {
 
 export const getArticles = async () => {
 	const articles = await fetch("/articles");
-	return articles.sort(sortByPublishedAt);
+	return articles.sort(sortByUpdatedAt);
 };
 
 export const getArticleBySlug = async (slug) => {
@@ -43,6 +43,11 @@ export const getArticleBySlug = async (slug) => {
 };
 
 export const getCustomers = async () => {
-	const articles = await fetch("/customers");
-	return articles.sort(sortByNameAsc);
+	const customers = await fetch("/customers");
+	return customers.sort(sortByNameAsc);
+};
+
+export const getProjects = async () => {
+	const projects = await fetch("/projects");
+	return projects.sort(sortByUpdatedAt);
 };
