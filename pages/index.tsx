@@ -9,14 +9,14 @@ import Work from "../components/index/Work";
 import TitleAndDesc from "../components/meta/TitleAndDesc";
 import Values from "../components/misc/Values";
 import WorkProcess from "../components/misc/WorkProcess";
-import { FOOTER_LINK_SEPARATOR } from "../constants";
+import { SEPARATOR } from "../constants";
 import { getArticles, getCustomers } from "../utils/strapi";
 
 const index = ({ articles, customers }) => {
 	return (
 		<>
 			<TitleAndDesc
-				title={`QUIKK ${FOOTER_LINK_SEPARATOR} Softwareentwicklung, mobile Apps und Webdesign`}
+				title={`QUIKK ${SEPARATOR} Softwareentwicklung, mobile Apps und Webdesign`}
 				description="QUIKK Software aus Minden entwickelt individuelle Software, E-Commerce-Lösungen, mobile Apps und einzigartige Webdesigns. Jetzt anfragen."
 			/>
 			<Hero />
@@ -24,7 +24,7 @@ const index = ({ articles, customers }) => {
 			<Values />
 			<Services />
 			<CustomerSlider customers={customers} />
-			<ProjectPreview />
+			<ProjectPreview articles={articles} />
 			<Work />
 			<WorkProcess />
 			<BlogPreview articles={articles} />

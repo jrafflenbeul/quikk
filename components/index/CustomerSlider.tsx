@@ -89,6 +89,9 @@ const CustomerSlider = ({ customers }) => {
 												alt={`${name} (${desc}) - QUIKK Software Kunde`}
 												title={name}
 												height={MAGIC_NUMBER_99}
+												style={{
+													maxWidth: `${MAGIC_NUMBER_243}px`,
+												}}
 											/>
 										</ExternalLink>
 									);

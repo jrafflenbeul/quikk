@@ -1,22 +1,33 @@
 import React from "react";
 import Head from "next/head";
-import { APPLICATION_NAME, LANGUAGE, PHONE } from "../../constants";
-import { LocalBusinessJsonLd } from "next-seo";
+import { APPLICATION_NAME, LANGUAGE } from "../../constants";
 
 const DefaultSEO = () => {
-	const city: string = "Munich";
-	const latitude: number = 48.10524;
-	const longitude: number = 11.59476;
-	const region: string = "DE-BY";
+	const city = "Minden";
+	const latitude = 52.30219;
+	const longitude = 8.86036;
+	const region = "DE-NW";
 	const keywords: Array<string> = [
 		APPLICATION_NAME,
-		"Watch Trade 24",
-		"Uhren",
-		"Armbanduhren",
-		"Uhrenhandel",
-		"Uhr kaufen",
-		"Uhr verkaufen",
-		"München",
+		"Software",
+		"Softwareentwicklung",
+		"Individualentwicklung",
+		"Programmierung",
+		"Entwicklung",
+		"Anwendungsentwicklung",
+		"App Entwicklung",
+		"Mobile Apps",
+		"Webentwicklung",
+		"Webdesign",
+		"SEO",
+		"API",
+		"Backend",
+		"Server",
+		"Datenbanken",
+		"Minden",
+		"Hannover",
+		"Bielefeld",
+		"Osnabrück",
 	];
 	const url: string = "https://QUIKK.de";
 	const favicon: string = "/favicon.ico";
@@ -26,7 +37,7 @@ const DefaultSEO = () => {
 			<Head>
 				<meta
 					name="viewport"
-					content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
+					content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover"
 				/>
 				<meta charSet="utf-8" />
 				<meta property="content-type" content="text/html; charset=UTF-8" />
@@ -127,25 +138,6 @@ const DefaultSEO = () => {
 				<meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
 				<meta name="theme-color" content="#ffffff" />
 			</Head>
-			<LocalBusinessJsonLd
-				type="Store"
-				id={url}
-				name={APPLICATION_NAME}
-				description="Uhren sicher und einfach online kaufen"
-				url={url}
-				telephone={PHONE}
-				address={{
-					streetAddress: "Chiemgaustr. 78",
-					addressLocality: city,
-					addressRegion: region.split("-")[1],
-					postalCode: "81549",
-					addressCountry: region.split("-")[0],
-				}}
-				geo={{
-					latitude: String(latitude),
-					longitude: String(longitude),
-				}}
-			/>
 		</>
 	);
 };

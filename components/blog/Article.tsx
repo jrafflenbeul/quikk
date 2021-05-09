@@ -41,11 +41,15 @@ const Article = ({
 						<Grid xs={24} sm={24} md={16} direction="column">
 							<Grid.Container>
 								<TextWithIcon icon={<Calendar />}>
-									{new Date(published_at).toLocaleDateString()}
+									<Text type="secondary" small span>
+										{new Date(published_at).toLocaleDateString()}
+									</Text>
 								</TextWithIcon>
 								<Spacer />
 								<TextWithIcon icon={<Clock />}>
-									{getReadingTimeInMinutes(content)} min
+									<Text type="secondary" small span>
+										{getReadingTimeInMinutes(content)} min
+									</Text>
 								</TextWithIcon>
 							</Grid.Container>
 							<Spacer />

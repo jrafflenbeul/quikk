@@ -8,7 +8,7 @@ import InternalLink from "../misc/InternalLink";
 import isMobile from "../hooks/isMobile";
 import ThemeWrapper from "../theme/ThemeWrapper";
 
-const ProjectPreview = () => {
+const ProjectPreview = ({ articles }) => {
 	const mobile = isMobile();
 	return (
 		<ThemeWrapper>
@@ -19,6 +19,9 @@ const ProjectPreview = () => {
 							Unsere Projekte
 						</Title>
 					</Grid>
+					{articles.map((article, i) => (
+						<Article {...article} key={i} />
+					))}
 					<Grid xs={24} sm={24} md alignItems="center" justify="center">
 						<InternalLink
 							href="/projekte"

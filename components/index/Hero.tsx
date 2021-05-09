@@ -35,12 +35,12 @@ const Hero = () => {
 						<Divider center={false} huge={!mobile} />
 						<Text type="secondary" style={{ marginTop: 0 }}>
 							Wir entwickeln Ihr individuelles Vorhaben agil nach Scrum. Unser
-							Dienstleistungsspektrum reicht dabei von klassischer Software hin
-							zu mobilen Apps,{" "}
+							Dienstleistungsspektrum reicht dabei von klassischer
+							Anwendungsentwicklung hin zu mobilen Apps,{" "}
 							<span style={{ whiteSpace: "nowrap" }}>E-Commerce</span>-Lösungen
 							und professionellem Webdesign.
 						</Text>
-						<Grid.Container gap={SMALL_GAP}>
+						<Grid.Container gap={mobile ? 0.5 : 1}>
 							<Grid xs={24} sm={24} md={12}>
 								<InternalLink href="/kontakt" style={{ width: "100%" }}>
 									<Button type="success-light" style={{ width: "100%" }}>

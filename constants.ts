@@ -11,7 +11,7 @@ export const APPLICATION_NAME: string = "QUIKK Software";
 export const EMAIL: string = "info@quikk.de";
 export const PHONE: string = "01523 390 2667";
 
-export const FOOTER_LINK_SEPARATOR: string = " | ";
+export const SEPARATOR: string = " - ";
 
 export const HEADER_LINKS: { [text: string]: string } = {
 	Home: "/",

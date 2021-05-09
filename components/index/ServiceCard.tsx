@@ -47,7 +47,12 @@ const ServiceCard = ({ title, content, icon }) => {
 								content={
 									<>
 										<Divider />
-										<Text style={{ fontWeight: "normal" }} type="secondary">
+										<Text
+											p
+											small={false}
+											style={{ fontWeight: "normal" }}
+											type="secondary"
+										>
 											{content}
 										</Text>
 									</>
