@@ -39,8 +39,3 @@ ol {
 	align-items: center;
 	justify-content: center;
 }
-
-.content .caption,
-.content dd {
-	font-size: unset !important;
-}
