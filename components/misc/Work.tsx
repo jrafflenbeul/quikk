@@ -28,7 +28,7 @@ const Work = ({
 					{[
 						{
 							icon: <BookOpen />,
-							title: "Verstehen + Prüfen",
+							title: "Verstehen",
 							content: [
 								"Erstes Kennenlernen",
 								"Konkretisierung des Projektrahmens",
@@ -39,18 +39,18 @@ const Work = ({
 						},
 						{
 							icon: <RefreshCcw />,
-							title: "Umsetzen + Entwickeln",
+							title: "Entwickeln",
 							content: [
 								"Agile Entwicklung nach Scrum",
 								"Aktive Einbindung des Kunden",
+								"Regelmäßige Feedbackzyklen",
 								"Inkrementelle Featureentwicklung",
-								"Transparenz und Flexibilität",
 								"Fixpreisgarantie: Kein Kleingedrucktes",
 							],
 						},
 						{
 							icon: <Gift />,
-							title: "Abschließen + Überzeugen",
+							title: "Überzeugen",
 							content: [
 								"Qualität durch automatisierte Tests",
 								"Langlebige und wartbare Lösungen",
