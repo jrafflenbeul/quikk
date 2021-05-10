@@ -50,3 +50,7 @@ dt {
 	align-items: center;
 	justify-content: center;
 }
+
+.react-multi-carousel-list ul li:before {
+	content: none !important;
+}

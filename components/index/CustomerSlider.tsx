@@ -84,25 +84,21 @@ const CustomerSlider = ({ customers }) => {
 							autoPlaySpeed={MAGIC_NUMBER_243 * MAGIC_NUMBER_24_3}
 							arrows={!mobile}
 						>
-							{customers.map(
-								({ name, desc, url, image: { url: imageUrl } }, i) => {
-									return (
-										// <ExternalLink key={i} href={url}>
-										<Image
-											src={imageUrl}
-											alt={`${name} (${desc}) - QUIKK Software Kunde`}
-											title={name}
-											height={MAGIC_NUMBER_99}
-											style={{
-												maxWidth: `${MAGIC_NUMBER_243}px`,
-												filter: "grayscale(100%)",
-											}}
-											key={i}
-										/>
-										// </ExternalLink>
-									);
-								},
-							)}
+							{customers.map(({ name, desc, image: { url: imageUrl } }, i) => {
+								return (
+									<Image
+										src={imageUrl}
+										alt={`${name} (${desc}) - QUIKK Software Kunde`}
+										title={name}
+										height={MAGIC_NUMBER_99}
+										style={{
+											maxWidth: `${MAGIC_NUMBER_243}px`,
+											filter: "grayscale(100%)",
+										}}
+										key={i}
+									/>
+								);
+							})}
 						</Carousel>
 					</Grid>
 				</Grid.Container>

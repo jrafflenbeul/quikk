@@ -13,7 +13,7 @@ const Mission = () => {
 					titleProps={{ h1: false, h2: true, caps: true }}
 					gridProps={{ ...breakpoints }}
 					title="Unser Versprechen"
-					desc="Für eine optimale Zusammenarbeit"
+					desc="Für eine optimale Zusammenarbeit."
 				/>
 				<Grid {...breakpoints} direction="column">
 					<Text type="secondary" p>
