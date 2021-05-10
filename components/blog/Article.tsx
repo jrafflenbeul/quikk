@@ -37,6 +37,7 @@ const Article = ({
 					<Grid.Container
 						direction={mobile ? "column-reverse" : "row"}
 						gap={GRID_GAP}
+						alignItems="flex-start"
 					>
 						<Grid xs={24} sm={24} md={16} direction="column">
 							<Grid.Container>

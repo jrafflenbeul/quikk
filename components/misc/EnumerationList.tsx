@@ -13,7 +13,7 @@ const EnumerationList = ({ _ }) => {
 			justify="flex-start"
 			alignItems="flex-start"
 		>
-			<Text h4>
+			<Text h3>
 				{React.cloneElement(_.icon, { size: "1rem" })} {_.title}
 			</Text>
 			<ul>

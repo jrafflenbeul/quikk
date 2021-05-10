@@ -26,7 +26,7 @@ const Preview = ({
 			<Grid xs={24}>
 				<InternalLink href={`${type}${isBlog ? "/" : "#"}${slug}`}>
 					<Card hoverable>
-						<Image src={image.url} style={{ objectFit: "cover" }} />
+						<Image src={image.url} style={{ objectFit: "cover" }} alt={title} />
 						<Text h4>{title}</Text>
 						<Text type="secondary" small>
 							{getPreviewText(content)}

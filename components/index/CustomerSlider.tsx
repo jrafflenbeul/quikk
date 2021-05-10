@@ -50,6 +50,11 @@ const CustomerSlider = ({ customers }) => {
 					zIndex: 10,
 					[dir]: mobile ? 0 : theme.layout.gap,
 				}}
+				aria-label={
+					dir === "left"
+						? "Vorherige Kunden anzeigen"
+						: "Nächste Kunden anzeigen"
+				}
 			>
 				{dir === "left" ? <ChevronLeft /> : <ChevronRight />}
 			</button>
