@@ -22,6 +22,7 @@ import {
 	ID_WEBDESIGN_AND_ECOMMERCE,
 } from "../../constants";
 import ThemeWrapper from "../theme/ThemeWrapper";
+import TitleAndSubtitle from "../misc/TitleAndSubtitle";
 
 const Services = () => {
 	const theme = useTheme();
@@ -99,11 +100,11 @@ const Services = () => {
 			>
 				<Container spacing>
 					<Grid.Container gap={GRID_GAP} alignItems="stretch">
-						<Grid xs={24}>
-							<Title h2 caps centered>
-								Unser Fokus
-							</Title>
-						</Grid>
+						<TitleAndSubtitle
+							title="Unser Fokus"
+							desc="Wir haben uns auf die Individualentwicklung spezialisiert und helfen außerdem bei Konzeption und Planung Ihrer Projekte."
+							titleProps={{ h1: false, h2: true }}
+						/>
 						{services.map((service, i) => (
 							<ServiceCard key={i} {...service} />
 						))}

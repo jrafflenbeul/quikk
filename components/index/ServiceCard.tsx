@@ -1,4 +1,4 @@
-import { Card, Display, Grid } from "@geist-ui/react";
+import { Card, Display, Grid, Text } from "@geist-ui/react";
 import React from "react";
 import InternalLink from "../misc/InternalLink";
 import { MAGIC_NUMBER_42 } from "../../constants";
@@ -23,19 +23,23 @@ const ServiceCard = ({ title, content, icon, id = null }) => {
 				>
 					<Display
 						caption={
-							<TitleAndSubtitle
-								title={title}
-								titleProps={{
-									h1: false,
-									h3: true,
-									caps: true,
-									centered: true,
-									color: true,
-								}}
-								dividerProps={{ center: true }}
-								desc={content}
-								grid={false}
-							/>
+							<>
+								<TitleAndSubtitle
+									title={title}
+									titleProps={{
+										h1: false,
+										h3: true,
+										caps: true,
+										centered: true,
+										color: true,
+									}}
+									dividerProps={{ center: true }}
+									grid={false}
+								/>
+								<Text type="secondary" p style={{ margin: 0 }}>
+									{content}
+								</Text>
+							</>
 						}
 					>
 						{React.cloneElement(icon, {

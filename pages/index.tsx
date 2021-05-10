@@ -1,9 +1,8 @@
 import React from "react";
-import BlogPreview from "../components/index/BlogPreview";
+import Corner from "../components/index/Corner";
 import CustomerSlider from "../components/index/CustomerSlider";
 import Hero from "../components/index/Hero";
 import Introduction from "../components/index/Introduction";
-import ProjectPreview from "../components/index/ProjectPreview";
 import Services from "../components/index/Services";
 import TitleAndDesc from "../components/meta/TitleAndDesc";
 import Values from "../components/misc/Values";
@@ -20,12 +19,13 @@ const index = ({ articles, customers, projects }) => {
 			/>
 			<Hero />
 			<Introduction />
-			<Values />
+			<Values heading />
 			<Services />
+			<Work heading variant="dark" />
 			<CustomerSlider customers={customers} />
-			<ProjectPreview projects={projects} />
-			<Work />
-			<BlogPreview articles={articles} />
+			<Corner article={articles[0]} project={projects[0]} />
+			{/* <ProjectPreview projects={projects} />
+			<BlogPreview articles={articles} /> */}
 		</>
 	);
 };

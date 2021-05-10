@@ -5,7 +5,7 @@ import Title from "./Title";
 
 const TitleAndSubtitle = ({
 	title,
-	desc,
+	desc = null,
 	gridProps = {},
 	titleProps = {},
 	dividerProps = {},
@@ -17,7 +17,7 @@ const TitleAndSubtitle = ({
 				{title}
 			</Title>
 			<Divider center={false} {...dividerProps} />
-			<Description title={desc} />
+			{desc && <Description title={desc} />}
 		</Grid>
 	) : (
 		<>
@@ -25,7 +25,7 @@ const TitleAndSubtitle = ({
 				{title}
 			</Title>
 			<Divider center={false} {...dividerProps} />
-			<Description title={desc} />
+			{desc && <Description title={desc} />}
 		</>
 	);
 };

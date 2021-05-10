@@ -7,49 +7,37 @@ import isMobile from "../hooks/isMobile";
 import ExternalLink from "../misc/ExternalLink";
 import Title from "../misc/Title";
 
-const Project = ({ name = "", desc = "", url = "", image }) => {
+const Project = ({ name = "", desc = "", url = "", image, slug }) => {
 	const mobile = isMobile();
 	const { url: src } = image[0] ?? { url: "" };
 
 	return (
-		<Grid xs={24}>
+		<Grid xs={24} id={slug}>
 			<Card style={{ width: "100%" }} width="100%">
 				<Grid.Container
 					direction={mobile ? "column-reverse" : "row"}
 					gap={GRID_GAP}
+					alignItems="flex-start"
 				>
 					<Grid xs={24} sm={24} md={16} direction="column">
 						<Title h4>{name}</Title>
 						<Text p type="secondary" small>
 							<ReactMarkdown>{desc}</ReactMarkdown>
 						</Text>
+						<Text small>
+							<ExternalLink
+								href={url}
+								style={{ width: mobile ? "100%" : null }}
+								color
+							>
+								{name} ansehen
+							</ExternalLink>
+						</Text>
 					</Grid>
 					<Grid xs={24} sm={24} md={8}>
 						<Image alt={name} src={src} />
 					</Grid>
 				</Grid.Container>
-				<Card.Footer>
-					<Grid.Container
-						gap={SMALL_GAP}
-						alignItems={mobile ? "center" : null}
-						justify={mobile ? "center" : null}
-					>
-						{/* <Grid>
-							<Badge type="success">Success</Badge>
-						</Grid>
-						*/}
-						<Grid xs={24}>
-							<ExternalLink
-								href={url}
-								style={{ width: mobile ? "100%" : null }}
-							>
-								<Button style={{ width: mobile ? "100%" : null }} ghost>
-									{name} ansehen <ExternalIcon />
-								</Button>
-							</ExternalLink>
-						</Grid>
-					</Grid.Container>
-				</Card.Footer>
 			</Card>
 		</Grid>
 	);

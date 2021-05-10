@@ -1,19 +1,18 @@
 import React from "react";
-import { Grid, Image, useTheme, Card, Text } from "@geist-ui/react";
+import { Grid, Image, useTheme } from "@geist-ui/react";
 import Container from "../layout/Container";
 import {
 	GRID_GAP,
 	MAGIC_NUMBER_243,
 	MAGIC_NUMBER_24_3,
-	MAGIC_NUMBER_42,
 	MAGIC_NUMBER_99,
 } from "../../constants";
-import Title from "../misc/Title";
 import ThemeWrapper from "../theme/ThemeWrapper";
 import Carousel from "react-multi-carousel";
 import isMobile from "../hooks/isMobile";
 import { ChevronLeft, ChevronRight } from "@geist-ui/react-icons";
 import ExternalLink from "../misc/ExternalLink";
+import TitleAndSubtitle from "../misc/TitleAndSubtitle";
 
 const CustomerSlider = ({ customers }) => {
 	const theme = useTheme();
@@ -61,11 +60,11 @@ const CustomerSlider = ({ customers }) => {
 		<ThemeWrapper>
 			<Container spacing>
 				<Grid.Container gap={GRID_GAP}>
-					<Grid xs={24}>
-						<Title h2 centered caps>
-							Unsere Kunden
-						</Title>
-					</Grid>
+					<TitleAndSubtitle
+						title="Unsere Kunden"
+						desc="Von einfachen Landingpages hin zu komplexen Auswertungstools und E-Commerce Lösungen."
+						titleProps={{ h1: false, h2: true }}
+					/>
 					<Grid xs={24} alignItems="center" justify="center">
 						<Carousel
 							responsive={responsive}
@@ -91,6 +90,7 @@ const CustomerSlider = ({ customers }) => {
 											height={MAGIC_NUMBER_99}
 											style={{
 												maxWidth: `${MAGIC_NUMBER_243}px`,
+												filter: "grayscale(100%)",
 											}}
 											key={i}
 										/>

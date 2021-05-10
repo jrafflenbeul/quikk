@@ -20,7 +20,7 @@ const Values = ({
 				<Grid.Container gap={GRID_GAP}>
 					{heading && (
 						<TitleAndSubtitle
-							title="Gute Gründe für uns"
+							title="Gründe für QUIKK"
 							desc="Wir leben die Softwareentwicklung und setzen auf eine vertrauensvolle und professionelle Zusammenarbeit mit Ihnen."
 							titleProps={{ h1: false, h2: true }}
 						/>
@@ -31,7 +31,7 @@ const Values = ({
 							title: "Fachkenntnisse",
 							content: [
 								"Eingespieltes, junges Team",
-								"Studierte Informatiker",
+								"Vollblut Informatiker",
 								"Mehrjährige Berufserfahrung",
 								"Branchenübergreifende Projekte",
 							],

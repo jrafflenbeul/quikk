@@ -15,6 +15,7 @@ import getHeaderHeightInPx from "../hooks/getHeaderHeightInPx";
 import isMobile from "../hooks/isMobile";
 import ThemeWrapper from "../theme/ThemeWrapper";
 import Title from "../misc/Title";
+import TitleAndSubtitle from "../misc/TitleAndSubtitle";
 
 const Hero = () => {
 	const mobile = isMobile();
@@ -37,8 +38,11 @@ const Hero = () => {
 				>
 					<Grid xs={24} sm={24} md={14} direction="column">
 						<Description title="Individuell von QUIKK Software." />
-						<Title h1>Softwareentwicklung, mobile Apps und Webdesign.</Title>
-						<Divider center={false} />
+						<TitleAndSubtitle
+							title="Softwareentwicklung, mobile Apps und Webdesign."
+							grid={false}
+							titleProps={{ caps: false }}
+						/>
 						<Text type="secondary" style={{ marginTop: 0 }}>
 							Wir entwickeln Ihr individuelles Vorhaben agil nach Scrum. Unser
 							Dienstleistungsspektrum reicht dabei von klassischen Web- und
