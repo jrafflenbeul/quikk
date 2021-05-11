@@ -24,15 +24,17 @@ const Project = ({ name = "", desc = "", url = "", image, slug }) => {
 						<Text p type="secondary" small>
 							<ReactMarkdown>{desc}</ReactMarkdown>
 						</Text>
-						<Text small>
-							<ExternalLink
-								href={url}
-								style={{ width: mobile ? "100%" : null }}
-								color
-							>
-								{name} ansehen
-							</ExternalLink>
-						</Text>
+						{url.length > 0 && (
+							<Text small>
+								<ExternalLink
+									href={url}
+									style={{ width: mobile ? "100%" : null }}
+									color
+								>
+									{name} ansehen
+								</ExternalLink>
+							</Text>
+						)}
 					</Grid>
 					<Grid xs={24} sm={24} md={8}>
 						<Image alt={name} src={src} />
