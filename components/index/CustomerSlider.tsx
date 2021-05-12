@@ -67,7 +67,7 @@ const CustomerSlider = ({ customers }) => {
 				<Grid.Container gap={GRID_GAP}>
 					<TitleAndSubtitle
 						title="Unsere Kunden"
-						desc="Von einfachen Landingpages hin zu komplexen Auswertungstools und E-Commerce Lösungen."
+						desc="Von einfachen Landingpages hin zu komplexen Auswertungstools, Buchungssystemen und E-Commerce Lösungen."
 						titleProps={{ h1: false, h2: true }}
 					/>
 					<Grid xs={24} alignItems="center" justify="center">
@@ -93,7 +93,6 @@ const CustomerSlider = ({ customers }) => {
 										height={MAGIC_NUMBER_99}
 										style={{
 											maxWidth: `${MAGIC_NUMBER_243}px`,
-											filter: "grayscale(100%)",
 										}}
 										key={i}
 									/>

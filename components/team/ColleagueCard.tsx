@@ -23,6 +23,7 @@ const ColleagueCard = ({
 	avatar = "",
 	bio = "",
 }) => {
+	const theme = useTheme();
 	const enteredSocials = Object.entries({
 		linkedin,
 		github,
@@ -70,6 +71,7 @@ const ColleagueCard = ({
 					height: "100%",
 					alignItems: "center",
 					justifyContent: "center",
+					borderTop: `${theme.layout.gapQuarter} solid ${theme.palette.success}`,
 				}}
 			>
 				<Grid.Container gap={SMALL_GAP}>

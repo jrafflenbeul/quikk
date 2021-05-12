@@ -10,11 +10,9 @@ import {
 import Container from "../layout/Container";
 import InternalLink from "../misc/InternalLink";
 import hero from "../../assets/images/hero.svg";
-import Divider from "../misc/Divider";
 import getHeaderHeightInPx from "../hooks/getHeaderHeightInPx";
 import isMobile from "../hooks/isMobile";
 import ThemeWrapper from "../theme/ThemeWrapper";
-import Title from "../misc/Title";
 import TitleAndSubtitle from "../misc/TitleAndSubtitle";
 
 const Hero = () => {

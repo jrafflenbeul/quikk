@@ -12,6 +12,7 @@ const ThemeWrapper = ({
 	[x: string]: any;
 }) => {
 	const theme = useTheme();
+	const { style, ...rest } = props;
 	return (
 		<GeistProvider
 			themes={[QUIKK_light, QUIKK_dark]}
@@ -23,9 +24,9 @@ const ThemeWrapper = ({
 						theme.palette[variant === "dark" ? "background" : "foreground"],
 					color:
 						theme.palette[variant === "dark" ? "foreground" : "background"],
-					...props?.style,
+					...style,
 				}}
-				{...props}
+				{...rest}
 			>
 				{children}
 			</section>

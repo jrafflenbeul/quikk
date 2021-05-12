@@ -1,6 +1,6 @@
 import { Grid } from "@geist-ui/react";
 import React from "react";
-import Article from "../../components/blog/Article";
+import PreviewCard from "../../components/index/PreviewCard";
 import Container from "../../components/layout/Container";
 import TitleAndDesc from "../../components/meta/TitleAndDesc";
 import TitleAndSubtitle from "../../components/misc/TitleAndSubtitle";
@@ -19,7 +19,17 @@ const Articles = ({ articles }) => {
 				<Grid.Container gap={GRID_GAP}>
 					<TitleAndSubtitle {...{ title, desc }} />
 					{articles.map((article, i) => (
-						<Article {...article} key={i} />
+						<Grid xs={24} md={12} key={i}>
+							<PreviewCard
+								title={article.title}
+								content={article.content}
+								image={article.image}
+								slug={article.slug}
+								type="blog"
+								author={article.author}
+								updatedAt={article.updatedAt}
+							/>
+						</Grid>
 					))}
 				</Grid.Container>
 			</Container>

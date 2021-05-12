@@ -8,6 +8,7 @@ const TitleAndSubtitle = ({
 	desc = null,
 	gridProps = {},
 	titleProps = {},
+	divider = true,
 	dividerProps = {},
 	grid = true,
 }) => {
@@ -16,7 +17,7 @@ const TitleAndSubtitle = ({
 			<Title h1 caps {...titleProps}>
 				{title}
 			</Title>
-			<Divider center={false} {...dividerProps} />
+			{divider && <Divider center={false} {...dividerProps} />}
 			{desc && <Description title={desc} />}
 		</Grid>
 	) : (
@@ -24,7 +25,7 @@ const TitleAndSubtitle = ({
 			<Title h1 caps {...titleProps}>
 				{title}
 			</Title>
-			<Divider center={false} {...dividerProps} />
+			{divider && <Divider center={false} {...dividerProps} />}
 			{desc && <Description title={desc} />}
 		</>
 	);

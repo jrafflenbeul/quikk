@@ -164,7 +164,7 @@ export const services = [
 
 const leistungen = () => {
 	const title =
-		"Die perfekte Ergänzung: Individuelle Software & attraktives Webdesign.";
+		"Gut kombiniert: Individuelle Software für Desktop, Smartphone und Web mit modernen Oberflächen.";
 	const desc =
 		"Mit unseren auf Sie zugeschnittenen Lösungen unterstützen wir Sie dabei, Ihren Arbeitsalltag effizienter zu gestalten und digitale Herausforderungen zu meistern.";
 

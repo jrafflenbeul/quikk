@@ -1,4 +1,4 @@
-import { Card, Display, Grid, Text } from "@geist-ui/react";
+import { Card, Display, Grid, Text, Button, useTheme } from "@geist-ui/react";
 import React from "react";
 import InternalLink from "../misc/InternalLink";
 import { MAGIC_NUMBER_42 } from "../../constants";
@@ -6,6 +6,7 @@ import TitleAndSubtitle from "../misc/TitleAndSubtitle";
 import { createLeistungenHrefFromId } from "../../utils/leistungen";
 
 const ServiceCard = ({ title, content, icon, id = null }) => {
+	const theme = useTheme();
 	return (
 		<Grid xs={24} sm={12} md={8} alignItems="stretch">
 			<InternalLink href={createLeistungenHrefFromId(id)}>
@@ -19,6 +20,7 @@ const ServiceCard = ({ title, content, icon, id = null }) => {
 						flexDirection: "column",
 						alignItems: "center",
 						justifyContent: "center",
+						borderTop: `${theme.layout.gapQuarter} solid ${theme.palette.success}`,
 					}}
 				>
 					<Display
@@ -35,8 +37,9 @@ const ServiceCard = ({ title, content, icon, id = null }) => {
 									}}
 									dividerProps={{ center: true }}
 									grid={false}
+									divider={false}
 								/>
-								<Text type="secondary" p style={{ margin: 0 }}>
+								<Text type="secondary" style={{ marginBottom: 0 }}>
 									{content}
 								</Text>
 							</>

@@ -24,8 +24,6 @@ const index = ({ articles, customers, projects }) => {
 			<Work heading variant="dark" />
 			<CustomerSlider customers={customers} />
 			<Corner article={articles[0]} project={projects[0]} />
-			{/* <ProjectPreview projects={projects} />
-			<BlogPreview articles={articles} /> */}
 		</>
 	);
 };
