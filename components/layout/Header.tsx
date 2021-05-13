@@ -1,4 +1,4 @@
-import { Text, Grid, useTheme, Image } from "@geist-ui/react";
+import { Grid, useTheme } from "@geist-ui/react";
 import React from "react";
 import isMobile from "../hooks/isMobile";
 import Container from "./Container";
@@ -9,7 +9,7 @@ import MobileNav from "./header/MobileNav";
 import InternalLink from "../misc/InternalLink";
 import quikk from "../../assets/logos/logo_light_quikk_only.svg";
 
-const Header = ({ menuLeft = true }: { menuLeft?: boolean }) => {
+const Header = () => {
 	const mobile = isMobile();
 	const theme = useTheme();
 	const logoHeightInEm = mobile ? 2 : 1.5;
@@ -30,9 +30,7 @@ const Header = ({ menuLeft = true }: { menuLeft?: boolean }) => {
 					}}
 				>
 					<Grid.Container direction="row" alignItems="center" justify="center">
-						<Grid xs md={0}>
-							{menuLeft && <MobileNav />}
-						</Grid>
+						<Grid xs md={0}></Grid>
 						<Grid
 							xs
 							style={{ textAlign: mobile ? "center" : null }}
@@ -50,8 +48,8 @@ const Header = ({ menuLeft = true }: { menuLeft?: boolean }) => {
 								/>
 							</InternalLink>
 						</Grid>
-						<Grid xs md={0} justify={menuLeft ? null : "flex-end"}>
-							{!menuLeft && <MobileNav />}
+						<Grid xs md={0} justify={"flex-end"}>
+							<MobileNav />
 						</Grid>
 						<Grid xs={0} md justify="flex-end" alignItems="center">
 							<DesktopNav />

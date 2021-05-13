@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Grid, Image, useTheme } from "@geist-ui/react";
 import Container from "../layout/Container";
 import {
+	BUTTON_ID,
 	GRID_GAP,
 	MAGIC_NUMBER_243,
 	MAGIC_NUMBER_24_3,
@@ -11,10 +12,15 @@ import ThemeWrapper from "../theme/ThemeWrapper";
 import Carousel from "react-multi-carousel";
 import isMobile from "../hooks/isMobile";
 import { ChevronLeft, ChevronRight } from "@geist-ui/react-icons";
-import ExternalLink from "../misc/ExternalLink";
 import TitleAndSubtitle from "../misc/TitleAndSubtitle";
 
 const CustomerSlider = ({ customers }) => {
+	const [successButtonClass, setSuccessButtonClass] = useState("");
+	useEffect(() => {
+		setSuccessButtonClass(
+			document?.getElementById(BUTTON_ID).classList.toString(),
+		);
+	});
 	const theme = useTheme();
 	const mobile = isMobile();
 	const responsive = {
@@ -40,7 +46,7 @@ const CustomerSlider = ({ customers }) => {
 		return (
 			<button
 				onClick={() => onClick()}
-				className={`react-multiple-carousel__arrow react-multiple-carousel__arrow--${dir} jsx-3585542286 btn`}
+				className={`react-multiple-carousel__arrow react-multiple-carousel__arrow--${dir} ${successButtonClass}`}
 				type="button"
 				style={{
 					position: "absolute",

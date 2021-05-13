@@ -22,7 +22,7 @@ const _app = ({ Component, pageProps }) => {
 	return (
 		<ThemeWrapper variant="dark">
 			<CssBaseline />
-			<Header menuLeft={false} />
+			<Header />
 			<DefaultSEO />
 			<main>
 				<Component {...pageProps} />

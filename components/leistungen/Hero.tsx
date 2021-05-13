@@ -43,7 +43,7 @@ const Hero = ({ title = "", subtitle = "", src = hero }) => {
 			<Container spacing>
 				<Grid.Container gap={GRID_GAP} alignItems="center">
 					<Grid xs={24} sm={24} md={14} direction="column">
-						<Description title="Eine ganzheitliche Lösung." />
+						<Description title="Immer eine ganzheitliche Lösung." />
 						<Title h1>{title}</Title>
 						<Divider center={false} />
 						<Text type="secondary" style={{ marginTop: 0 }}>

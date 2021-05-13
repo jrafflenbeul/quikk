@@ -1,7 +1,7 @@
 import { ButtonGroup, Button, useTheme } from "@geist-ui/react";
 import React from "react";
 import { Phone, Mail } from "@geist-ui/react-icons";
-import { EMAIL, PHONE } from "../../../constants";
+import { BUTTON_ID, EMAIL, PHONE } from "../../../constants";
 import { useRouter } from "next/router";
 import { getMailToHref, getTelHref } from "../../../utils/kontakt";
 
@@ -30,6 +30,7 @@ const CTA = ({ fit = true }: { fit?: boolean }) => {
 				auto
 				onClick={() => handleUrlClick(getTelHref(PHONE))}
 				aria-label="QUIKK Software anrufen"
+				id={BUTTON_ID}
 			/>
 		</ButtonGroup>
 	);

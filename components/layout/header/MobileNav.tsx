@@ -32,6 +32,7 @@ const MobileNav = () => {
 				auto
 				onClick={toggleMenu}
 				aria-label={`Menü ${menuOpen ? "schließen" : "öffnen"}`}
+				type="success-light"
 			/>
 			<MobileMenuWrapper visible={menuOpen}>
 				<Grid.Container style={{ height: "100%" }} gap={0}>

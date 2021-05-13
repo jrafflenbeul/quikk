@@ -1,4 +1,3 @@
-import { Grid } from "@geist-ui/react";
 import React from "react";
 import Hero from "../../components/leistungen/Hero";
 import TitleAndDesc from "../../components/meta/TitleAndDesc";
@@ -7,24 +6,25 @@ import apps from "../../assets/images/apps.svg";
 import webdesign from "../../assets/images/webdesign.svg";
 import server from "../../assets/images/server.svg";
 import software from "../../assets/images/software.svg";
+import sprint from "../../assets/images/sprint.svg";
+
 import {
-	ID_DATABASES_SERVERS_AND_APIS,
+	ID_SCRUM,
+	ID_DATABASES_AND_APIS,
 	ID_MOBILE_APPS,
-	ID_SOFTWARE,
-	ID_WEBDESIGN_AND_ECOMMERCE,
-	GRID_GAP,
+	ID_SOFTWARE_DEVELOPMENT,
+	ID_ECOMMERCE_AND_WEBDESIGN,
 } from "../../constants";
 import Container from "../../components/layout/Container";
 import ServiceFooter from "../../components/leistungen/ServiceFooter";
-import ThemeWrapper from "../../components/theme/ThemeWrapper";
 
 export const services = [
 	{
 		src: software,
-		title: "Software und Tools",
+		title: "Softwareentwicklung",
 		content:
 			"Professionelle und zielgerichtete Entwicklung von Software. Mehr Funktionalität und Unterstützung für Ihren Arbeitsalltag durch eine individuelle Implementierung.",
-		id: ID_SOFTWARE,
+		id: ID_SOFTWARE_DEVELOPMENT,
 		use: [
 			{
 				title: "Individualentwicklung",
@@ -69,11 +69,40 @@ export const services = [
 		],
 	},
 	{
-		src: webdesign,
-		title: "Webdesign und E-Commerce",
+		src: apps,
+		title: "Mobile Apps",
 		content:
-			"Für einen attraktiven und professionellen Auftritt im Web, der Sie und Ihr Unternehmen wiederspiegelt. Mit eBay/mobile.de Integration und SEO.",
-		id: ID_WEBDESIGN_AND_ECOMMERCE,
+			"Sind Sie oft unterwegs oder müssen jederzeit erreichbar sein? Dann muss eine flexible Lösung her: Wir entwickeln Apps für Android und iOS mit Offline Verfügbarkeit.",
+		id: ID_MOBILE_APPS,
+		use: [
+			{
+				title: "Software für die Hosentasche",
+				content:
+					"Sie benötigen mehr Flexibilität bei der Nutzung Ihrer Anwendungen? Wir bieten die Entwicklung von mobilen Apps an und nutzen die eingebauten Features der Smartphones wie Kamera, Bluetooth oder GPS.",
+			},
+			{
+				title: "Offline Support",
+				content:
+					"Aktuell können wir noch nicht überall und zu jeder Zeit online sein. Auch wir kennen das Problem und berücksichtigen daher in unseren Apps Möglichkeiten, Inhalte für eine spätere Verwendung herunterzuladen.",
+			},
+			{
+				title: "Intuitive Bedienung",
+				content:
+					"Zusammen mit einer gemeinsamen Einführung sorgt ein klar strukturiertes Layout und eine intuitive Bedienung unserer Apps dafür, dass sich NutzerInnen zurechtfinden und Freude an der Bedienung haben.",
+			},
+			{
+				title: "Für Android und iOS",
+				content:
+					"Unsere Apps lassen sich auf beiden Betriebssystemen installieren und nutzen.",
+			},
+		],
+	},
+	{
+		src: webdesign,
+		title: "E-Commerce und Webdesign",
+		content:
+			"Eigene Buchungs- und Bezahlsysteme, wahlweise mit eBay oder mobile.de Integration. Ein attraktiver und professioneller Auftritt im Web, der Sie und Ihr Unternehmen wiederspiegelt.",
+		id: ID_ECOMMERCE_AND_WEBDESIGN,
 		use: [
 			{
 				title: "Professionell, individuell, einzigartig",
@@ -108,40 +137,11 @@ export const services = [
 		],
 	},
 	{
-		src: apps,
-		title: "Mobile Apps",
-		content:
-			"Sind Sie oft unterwegs oder müssen jederzeit erreichbar sein? Dann muss eine flexible Lösung her: Wir entwickeln Apps für Android und iOS mit Offline Verfügbarkeit.",
-		id: ID_MOBILE_APPS,
-		use: [
-			{
-				title: "Software für die Hosentasche",
-				content:
-					"Sie benötigen mehr Flexibilität bei der Nutzung Ihrer Anwendungen? Wir bieten die Entwicklung von mobilen Apps an und nutzen die eingebauten Features der Smartphones wie Kamera, Bluetooth oder GPS.",
-			},
-			{
-				title: "Offline Support",
-				content:
-					"Aktuell können wir noch nicht überall und zu jeder Zeit online sein. Auch wir kennen das Problem und berücksichtigen daher in unseren Apps Möglichkeiten, Inhalte für eine spätere Verwendung herunterzuladen.",
-			},
-			{
-				title: "Intuitive Bedienung",
-				content:
-					"Zusammen mit einer gemeinsamen Einführung sorgt ein klar strukturiertes Layout und eine intuitive Bedienung unserer Apps dafür, dass sich NutzerInnen zurechtfinden und Freude an der Bedienung haben.",
-			},
-			{
-				title: "Für Android und iOS",
-				content:
-					"Unsere Apps lassen sich auf beiden Betriebssystemen installieren und nutzen.",
-			},
-		],
-	},
-	{
 		src: server,
-		title: "Datenbanken, Server und APIs",
+		title: "Datenbanken und Schnittstellen",
 		content:
 			"Sie möchten Ihre Anwendungen miteinander verbinden, Inhalte in Datenbanken speichern oder neue Schnittstellen entwickeln lassen? Wir helfen Ihnen dabei.",
-		id: ID_DATABASES_SERVERS_AND_APIS,
+		id: ID_DATABASES_AND_APIS,
 		use: [
 			{
 				title: "Ganzheitliche Lösungen",
@@ -157,6 +157,35 @@ export const services = [
 				title: "Eigene Datenbankentwicklung",
 				content:
 					"Wir entwickeln und erweitern Datenbanken für Ihr System und sorgen für eine fehlerfreie Anbindung an Ihre Anwendungen. Passgenau, flexibel und nach Ihren Anforderungen umgesetzt.",
+			},
+		],
+	},
+	{
+		src: sprint,
+		title: "Agiles Projektmanagement nach Scrum",
+		content:
+			"Ein Framework, das uns dabei hilft, die Entwicklung Ihrer Lösungen iterativ und inkrementell durchzuführen und regelmäßiges Feedback einzuholen.",
+		id: ID_SCRUM,
+		use: [
+			{
+				title: "Ihre Vorteile",
+				content:
+					"Mit einer adaptiven, in Absprache mit Ihnen entstehenden Projektplanung entwickeln wir die Features unserer Produkte inkrementell in 2-wöchigen Sprints. Durch die flexible Entwicklung sind Sie immer im Bilde darüber, an welchen Stellen Ihrer Lösung zurzeit gearbeitet wird, und können außerdem zeitnah Feedback zu unserer Entwicklung geben oder die Planungsrichtung verändern.",
+			},
+			{
+				title: "Unsere Sprints",
+				content:
+					"Ein Sprint stellt den Entwicklungs- und Abrechnungszeitraum für die von Ihnen beauftragten Leistungen dar. Aus dem gemeinsam mit Ihnen erarbeiteten Product Backlog an zu entwickelnden Features priorisieren Sie die Leistungen, die in den folgenden zwei Wochen umgesetzt werden sollen.",
+			},
+			{
+				title: "Inkrementelle Features",
+				content:
+					"Das Ergebnis eines jeden Sprints ist die einsatzbereite und kontinuierliche Weiterentwicklung des Produktes. Wir beginnen mit einem Prototypen, der grundlegende Funktionalitäten enthält und setzen schrittweise alle weiteren Features um, die wir gemeinsam mit Ihnen erarbeitet haben. Sie müssen daher nicht bis zur gesamten Fertigstellung des Projektes warten, um Ihre Lösung einsetzen zu können.",
+			},
+			{
+				title: "Product und Sprint Backlog",
+				content:
+					"Im Product Backlog halten wir gemeinsam mit Ihnen alle Features fest, die Sie sich für Ihre Lösung wünschen. Zu Beginn eines jeden Sprints werden die zu entwickelnden Features priorisiert und in den Sprint Backlog verschoben. Features, die sich im Sprint Backlog befinden, werden während des Sprints umgesetzt. Sie erhalten zu jeder Zeit Zugriff auf beide Backlogs.",
 			},
 		],
 	},

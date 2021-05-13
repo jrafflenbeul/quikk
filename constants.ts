@@ -7,6 +7,7 @@ export const breakpoints_fill = { xs: 24, lg: 8 };
 export const LANGUAGE: string = "de";
 export const MENU_OPEN: string = "menu-open";
 export const LOADING: string = "loading";
+export const BUTTON_ID: string = "theme-button";
 
 export const APPLICATION_NAME: string = "QUIKK Software";
 export const EMAIL: string = "info@quikk.de";
@@ -19,10 +20,11 @@ export const IMPRESSUM_LINK = "/impressum";
 export const DATENSCHUTZ_LINK = "/datenschutz";
 export const LEISTUNGEN_LINK = "/leistungen";
 
-export const ID_SOFTWARE = "softwareentwicklung";
-export const ID_WEBDESIGN_AND_ECOMMERCE = "webdesign-und-ecommerce";
+export const ID_SOFTWARE_DEVELOPMENT = "softwareentwicklung";
+export const ID_ECOMMERCE_AND_WEBDESIGN = "ecommerce-und-webdesign";
 export const ID_MOBILE_APPS = "mobile-apps";
-export const ID_DATABASES_SERVERS_AND_APIS = "datenbanken-server-und-apis";
+export const ID_DATABASES_AND_APIS = "datenbanken-und-schnittstellen";
+export const ID_SCRUM = "scrum-agiles-projektmanagement";
 
 export const HEADER_LINKS: { [text: string]: string } = {
 	Home: "/",
