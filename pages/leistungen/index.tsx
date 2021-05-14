@@ -47,6 +47,11 @@ export const services = [
 					"Gemeinsam mit uns werten Sie Ihre Geschäftsdaten aus und erhalten Einblicke in die alltäglich anfallenden Datensätze, um neue Erkenntnisse zu gewinnen.",
 			},
 			{
+				title: "Webscraping und Bots für Webbrowser",
+				content:
+					"Automatisierte Bots können Inhalte im World Wide Web auslesen, erfassen und analysieren. Auch Nutzerverhalten kann mit Bots schneller und zuverlässiger simuliert und ausgeführt werden.",
+			},
+			{
 				title: "Per Installation oder im Web",
 				content:
 					"Egal wie groß oder klein unsere Lösungen sind, Sie selbst können entscheiden, wie die Nutzung aussieht. Unsere Anwendungen können bequem und überall vom Web abgerufen oder wahlweise auf Ihrem Computer installiert werden.",
