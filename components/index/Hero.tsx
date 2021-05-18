@@ -9,7 +9,7 @@ import {
 } from "../../constants";
 import Container from "../layout/Container";
 import InternalLink from "../misc/InternalLink";
-import hero from "../../assets/images/hero.svg";
+import hero from "../../assets/logos/logo_dark_q.svg";
 import getHeaderHeightInPx from "../hooks/getHeaderHeightInPx";
 import isMobile from "../hooks/isMobile";
 import ThemeWrapper from "../theme/ThemeWrapper";
@@ -35,19 +35,18 @@ const Hero = () => {
 					alignItems="center"
 					justify="center"
 				>
-					<Grid xs={24} sm={24} md={14} direction="column">
+					<Grid xs={24} sm={24} md={17} direction="column">
 						<Description title="Willkommen bei QUIKK Software." />
 						<TitleAndSubtitle
-							title="Individuelle Softwareentwicklung, mobile Apps und Webdesign."
+							title="Individuelle Softwareentwicklung und mobile Apps nach Ihren Vorstellungen."
 							grid={false}
 							titleProps={{ caps: false }}
 						/>
 						<Text type="secondary" style={{ marginTop: 0 }}>
-							Wir entwickeln Ihr individuelles Vorhaben agil nach Scrum. Unser
-							Dienstleistungsspektrum reicht dabei von klassischen Web- und
-							Desktopanwendungen hin zu mobilen Apps,{" "}
-							<span style={{ whiteSpace: "nowrap" }}>E-Commerce</span>-Lösungen
-							und professionellem Webdesign.
+							Neben der klassischen Entwicklung von Web- und Desktopanwendungen,
+							mobilen Apps und E-Commerce-Lösungen bieten wir Ihnen außerdem
+							unsere Unterstützung bei der Planung, Konzeption und Umsetzung
+							Ihrer Projekte an.
 						</Text>
 						<Grid.Container gap={SMALL_GAP}>
 							<Grid xs={24} sm={24} md={12}>
@@ -67,11 +66,11 @@ const Hero = () => {
 						</Grid.Container>
 					</Grid>
 					{!mobile && (
-						<Grid md={10} justify="center" alignItems="center" style={{}}>
+						<Grid md={7} justify="center" alignItems="center" style={{}}>
 							<Image
 								src={hero}
-								alt="Individuelle Softwareentwicklung, mobile Apps und Webdesign."
-								title="Individuelle Softwareentwicklung, mobile Apps und Webdesign."
+								alt="QUIKK Software Logo"
+								title="QUIKK Software Logo"
 								height={MAGIC_NUMBER_243}
 							/>
 						</Grid>

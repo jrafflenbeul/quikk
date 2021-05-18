@@ -15,8 +15,8 @@ const index = ({ articles, customers, projects }) => {
 	return (
 		<>
 			<TitleAndDesc
-				title={`QUIKK ${SEPARATOR} Softwareentwicklung, mobile Apps und Webdesign`}
-				description="QUIKK Software aus Minden entwickelt individuelle Software, E-Commerce-Lösungen, mobile Apps und einzigartige Webdesigns. Jetzt anfragen."
+				title={`QUIKK Software ${SEPARATOR} Softwareentwicklung und mobile Apps`}
+				description="Konzeption und Umsetzung von individueller Software in Minden. IT-Beratung, Webentwicklung und Anwendungsentwicklung für Mobile, Desktop und Web."
 			/>
 			<Hero />
 			<Services />

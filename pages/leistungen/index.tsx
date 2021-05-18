@@ -198,9 +198,9 @@ export const services = [
 
 const leistungen = () => {
 	const title =
-		"Gut kombiniert: Individuelle Software für Desktop, Smartphone und Web mit modernen Oberflächen.";
+		"Individuelle Software für Mobile, Desktop und Web mit modernen Oberflächen";
 	const desc =
-		"Mit unseren auf Sie zugeschnittenen Lösungen unterstützen wir Sie dabei, Ihren Arbeitsalltag effizienter zu gestalten und digitale Herausforderungen zu meistern.";
+		"Mit unseren auf Sie zugeschnittenen Lösungen unterstützen wir Sie bei Ihren Projekten. Egal ob IT-Beratung, Sprint-Planung, technische Konzeption, oder konkrete Umsetzung Ihrer Idee.";
 
 	return (
 		<>
