@@ -2,6 +2,7 @@ import { Themes } from "@geist-ui/react";
 
 const layout = {
 	radius: "5px 12px",
+	// radius: "0px",
 };
 
 const dark = "#21242D";

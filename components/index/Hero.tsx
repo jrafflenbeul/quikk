@@ -17,6 +17,7 @@ import TitleAndSubtitle from "../misc/TitleAndSubtitle";
 
 const Hero = () => {
 	const mobile = isMobile();
+
 	return (
 		<ThemeWrapper variant="light">
 			<Container
@@ -35,9 +36,9 @@ const Hero = () => {
 					justify="center"
 				>
 					<Grid xs={24} sm={24} md={14} direction="column">
-						<Description title="Individuell von QUIKK Software." />
+						<Description title="Willkommen bei QUIKK Software." />
 						<TitleAndSubtitle
-							title="Softwareentwicklung, mobile Apps und Webdesign."
+							title="Individuelle Softwareentwicklung, mobile Apps und Webdesign."
 							grid={false}
 							titleProps={{ caps: false }}
 						/>
@@ -66,11 +67,11 @@ const Hero = () => {
 						</Grid.Container>
 					</Grid>
 					{!mobile && (
-						<Grid md={10} justify="center">
+						<Grid md={10} justify="center" alignItems="center" style={{}}>
 							<Image
 								src={hero}
-								alt="QUIKK Software: Softwareentwicklung, mobile Apps und Webdesign."
-								title="QUIKK Software: Softwareentwicklung, mobile Apps und Webdesign."
+								alt="Individuelle Softwareentwicklung, mobile Apps und Webdesign."
+								title="Individuelle Softwareentwicklung, mobile Apps und Webdesign."
 								height={MAGIC_NUMBER_243}
 							/>
 						</Grid>

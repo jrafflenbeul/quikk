@@ -24,6 +24,7 @@ const ServicePreview = ({
 		<Image
 			src={src}
 			alt={alt}
+			title={alt}
 			style={{ maxHeight: "300px", maxWidth: "300px" }}
 		/>
 	);

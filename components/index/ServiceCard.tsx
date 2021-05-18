@@ -12,7 +12,6 @@ const ServiceCard = ({ title, content, icon, id = null }) => {
 			<InternalLink href={createLeistungenHrefFromId(id)}>
 				<Card
 					hoverable
-					shadow
 					style={{
 						width: "100%",
 						height: "100%",

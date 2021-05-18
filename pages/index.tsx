@@ -5,6 +5,7 @@ import Hero from "../components/index/Hero";
 import Introduction from "../components/index/Introduction";
 import Services from "../components/index/Services";
 import TitleAndDesc from "../components/meta/TitleAndDesc";
+import How from "../components/misc/How";
 import Values from "../components/misc/Values";
 import Work from "../components/misc/Work";
 import { SEPARATOR } from "../constants";
@@ -18,11 +19,12 @@ const index = ({ articles, customers, projects }) => {
 				description="QUIKK Software aus Minden entwickelt individuelle Software, E-Commerce-Lösungen, mobile Apps und einzigartige Webdesigns. Jetzt anfragen."
 			/>
 			<Hero />
+			<Services />
 			<Introduction />
 			<Values heading />
-			<Services />
 			<Work heading variant="dark" />
 			<CustomerSlider customers={customers} />
+			<How />
 			<Corner article={articles[0]} project={projects[0]} />
 		</>
 	);

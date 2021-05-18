@@ -167,7 +167,7 @@ export const services = [
 	},
 	{
 		src: sprint,
-		title: "Agiles Projektmanagement nach Scrum",
+		title: "Agiles Projektmanagement",
 		content:
 			"Ein Framework, das uns dabei hilft, die Entwicklung Ihrer Lösungen iterativ und inkrementell durchzuführen und regelmäßiges Feedback einzuholen.",
 		id: ID_SCRUM,

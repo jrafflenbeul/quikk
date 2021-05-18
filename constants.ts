@@ -19,6 +19,8 @@ export const KONTAKT_LINK = "/kontakt";
 export const IMPRESSUM_LINK = "/impressum";
 export const DATENSCHUTZ_LINK = "/datenschutz";
 export const LEISTUNGEN_LINK = "/leistungen";
+export const BLOG_LINK = "/blog";
+export const PROJEKTE_LINK = "/projekte";
 
 export const ID_SOFTWARE_DEVELOPMENT = "softwareentwicklung";
 export const ID_ECOMMERCE_AND_WEBDESIGN = "ecommerce-und-webdesign";
@@ -27,10 +29,9 @@ export const ID_DATABASES_AND_APIS = "datenbanken-und-schnittstellen";
 export const ID_SCRUM = "scrum-agiles-projektmanagement";
 
 export const HEADER_LINKS: { [text: string]: string } = {
-	Home: "/",
 	Leistungen: LEISTUNGEN_LINK,
-	Projekte: "/projekte",
-	Blog: "/blog",
+	Projekte: PROJEKTE_LINK,
+	Blog: BLOG_LINK,
 	Team: "/team",
 	Karriere: "/karriere",
 	Kontakt: KONTAKT_LINK,
@@ -43,3 +44,5 @@ export const MAGIC_NUMBER_0_243 = 0.243;
 export const MAGIC_NUMBER_99 = 99;
 export const MAGIC_NUMBER_69 = 69;
 export const MAGIC_NUMBER_42 = 42;
+
+export const HEADER_Z_INDEX = MAGIC_NUMBER_99;

@@ -1,4 +1,4 @@
-import { Text, Grid, useTheme, Description } from "@geist-ui/react";
+import { Text, Grid, useTheme, Description, Divider } from "@geist-ui/react";
 import React from "react";
 import { APPLICATION_NAME, GRID_GAP, SMALL_GAP } from "../../constants";
 import ThemeWrapper from "../theme/ThemeWrapper";
@@ -8,9 +8,12 @@ import ContactLinks from "./footer/ContactLinks";
 import CompanyLinks from "./footer/CompanyLinks";
 import SocialLinks from "./footer/SocialLinks";
 import Container from "./Container";
+import isMobile from "../hooks/isMobile";
+import quikk from "../../assets/logos/logo_light.svg";
 
 const Footer = () => {
 	const theme = useTheme();
+	const mobile = isMobile();
 
 	const contents = [
 		{ title: "Rechtliches", content: <LegalLinks /> },
@@ -30,7 +33,19 @@ const Footer = () => {
 								<Description {...{ title, content }} />
 							</Grid>
 						))}
-						<Grid xs={0} md={24}>
+					</Grid.Container>
+					{!mobile && (
+						<>
+							<Divider y={GRID_GAP}>
+								<img
+									src={quikk}
+									alt="QUIKK Software Logo"
+									title="QUIKK Software Logo"
+									style={{
+										height: "1.5em",
+									}}
+								/>
+							</Divider>
 							<Text small type="secondary">
 								Wir bei QUIKK Software & Webdesign UG (haftungsbeschränkt)
 								entwickeln seit Oktober 2020 individuelle Software, attraktive
@@ -39,8 +54,8 @@ const Footer = () => {
 								sind ein junges und agiles Tech-Startup mit Fokus auf Qualität
 								und Transparenz.
 							</Text>
-						</Grid>
-					</Grid.Container>
+						</>
+					)}
 				</Container>
 				<Grid.Container>
 					<Grid
@@ -50,7 +65,7 @@ const Footer = () => {
 						justify="center"
 					>
 						<Text p type="secondary" small>
-							© {new Date().getFullYear()} {APPLICATION_NAME}
+							© 2020 - {new Date().getFullYear()} {APPLICATION_NAME}
 						</Text>
 					</Grid>
 				</Grid.Container>

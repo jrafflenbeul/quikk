@@ -1,10 +1,9 @@
-import { useTheme } from "@geist-ui/react";
 import React, { useEffect, useState } from "react";
-import { MENU_OPEN } from "../../../constants";
+import { HEADER_Z_INDEX, MENU_OPEN } from "../../../constants";
 import getHeaderHeightInPx from "../../hooks/getHeaderHeightInPx";
+import ReactDOM from "react-dom";
 
 const MobileMenuWrapper = ({ visible: pVisible, children }) => {
-	const theme = useTheme();
 	const [visible, setVisible] = useState<boolean>(false);
 	const height = getHeaderHeightInPx();
 
@@ -25,10 +24,7 @@ const MobileMenuWrapper = ({ visible: pVisible, children }) => {
 			<style jsx>{`
 				section {
 					position: fixed;
-					width: 100vw;
-					height: 0px;
-					background-color: ${theme.palette.background};
-					z-index: 5000;
+					z-index: ${HEADER_Z_INDEX};
 					top: -5000px;
 					left: -5000px;
 				}
@@ -36,10 +32,12 @@ const MobileMenuWrapper = ({ visible: pVisible, children }) => {
 					top: ${height}px;
 					left: 0;
 					bottom: 0;
-					display: unset;
-					width: 100%;
-					height: calc(100vh - ${height}px);
-					border-top: 1px solid ${theme.palette.border};
+					width: 100vw;
+					height: 0;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					background: "red";
 				}
 			`}</style>
 		</section>

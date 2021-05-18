@@ -55,6 +55,7 @@ const Hero = ({ title = "", subtitle = "", src = hero }) => {
 						<Image
 							src={src}
 							alt={`${title} bei QUIKK Software & Webdesign`}
+							title={`${title} bei QUIKK Software & Webdesign`}
 							style={{ maxWidth: "300px" }}
 						/>
 					</Grid>

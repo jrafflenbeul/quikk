@@ -25,7 +25,7 @@ const PreviewCard = ({
 	const isBlog = type === "blog";
 	const theme = useTheme();
 	return (
-		<InternalLink href={`${type}${isBlog ? "/" : "#"}${slug}`}>
+		<InternalLink href={`${type}/${slug}`}>
 			<Card
 				hoverable
 				style={{

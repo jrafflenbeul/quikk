@@ -14,6 +14,7 @@ body.loading {
 
 body.menu-open {
 	overflow: hidden;
+	background: red;
 }
 
 header .tabs .content {
@@ -53,4 +54,21 @@ dt {
 
 .react-multi-carousel-list ul li:before {
 	content: none !important;
+}
+
+.tabs svg {
+	margin: 0 !important;
+}
+
+.popover .inner {
+	padding: 0 !important;
+}
+
+header .card img {
+	width: unset !important;
+}
+
+.tooltip-content.popover {
+	position: fixed !important;
+	top: 88px !important;
 }

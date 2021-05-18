@@ -1,5 +1,6 @@
 import { Text, useTheme } from "@geist-ui/react";
 import React from "react";
+import { getNodeText } from "../../utils/leistungen";
 import isMobile from "../hooks/isMobile";
 
 const Title = ({
@@ -31,7 +32,7 @@ const Title = ({
 			}}
 			{...props}
 		>
-			{caps ? children.toUpperCase() : children}
+			{caps ? getNodeText(children).toUpperCase() : children}
 		</Text>
 	);
 };

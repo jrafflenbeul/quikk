@@ -4,7 +4,7 @@ import Container from "../layout/Container";
 import ServiceCard from "./ServiceCard";
 import {
 	Layout,
-	Search,
+	Users,
 	Server,
 	Smartphone,
 	Code,
@@ -13,7 +13,6 @@ import {
 	FastForward,
 	Compass,
 } from "@geist-ui/react-icons";
-import Title from "../misc/Title";
 import {
 	GRID_GAP,
 	ID_SCRUM,
@@ -30,60 +29,59 @@ const Services = () => {
 
 	const services = [
 		{
-			title: "Software",
+			title: "Individuelle Software",
 			content:
 				"Maßgeschneiderte Softwarelösungen als Desktop- und Webanwendung.",
 			icon: <Code />,
 			id: ID_SOFTWARE_DEVELOPMENT,
 		},
 		{
-			title: "Fullstack",
-			content:
-				"Ganzheitliche Anwendungen mit Nutzeroberfläche, Server und Datenbank.",
+			title: <>Anwendungs&shy;entwicklung</>,
+			content: "Ganzheitliche Anwendungen mit Nutzeroberfläche und Datenlogik.",
 			icon: <Server />,
 			id: ID_SOFTWARE_DEVELOPMENT,
 		},
 		{
-			title: "Mobile Apps",
-			content: "Software für die Hosentasche. Mobile Apps für Android und iOS.",
+			title: "Mobile Apps (alle Plattformen)",
+			content: "Software für die Hosentasche. Anwendungen für Android und iOS.",
 			icon: <Smartphone />,
 			id: ID_MOBILE_APPS,
 		},
 		{
-			title: "APIs",
-			content: "Schnittstellen für eine einfache Kommunikation Ihrer Systeme.",
-			icon: <GridIcon />,
-			id: ID_DATABASES_AND_APIS,
-		},
-		{
-			title: "E-Commerce",
-			content:
-				"Eigene Bestell- und Buchungssysteme sowie eBay/mobile.de Anbindung.",
-			icon: <ShoppingBag />,
-			id: ID_ECOMMERCE_AND_WEBDESIGN,
-		},
-		{
-			title: "Prototyping",
+			title: "Konzeption und Prototyping",
 			content:
 				"Wir überprüfen und bestätigen die Durchführbarkeit Ihres Vorhabens.",
 			icon: <Compass />,
 			id: ID_SOFTWARE_DEVELOPMENT,
 		},
 		{
-			title: "Webdesign",
+			title: <>E-Commerce und Handel</>,
+			content:
+				"Eigene Bestell- und Buchungssysteme sowie eBay/mobile.de Anbindung.",
+			icon: <ShoppingBag />,
+			id: ID_ECOMMERCE_AND_WEBDESIGN,
+		},
+		{
+			title: "Zusammenarbeit und Beratung",
+			content:
+				"Wir helfen Ihnen dabei, technische Herausforderungen zu meistern.",
+			icon: <Users />,
+			id: ID_SOFTWARE_DEVELOPMENT,
+		},
+		{
+			title: "Integration und APIs",
+			content: "Schnittstellen für eine einfache Kommunikation Ihrer Systeme.",
+			icon: <GridIcon />,
+			id: ID_DATABASES_AND_APIS,
+		},
+		{
+			title: "Webentwicklung und Webdesign",
 			content: "Ein Webauftritt, der genauso einzigartig ist, wie Sie selbst.",
 			icon: <Layout />,
 			id: ID_ECOMMERCE_AND_WEBDESIGN,
 		},
 		{
-			title: "SEO",
-			content:
-				"Lassen Sie sich in den Weiten des World Wide Webs besser finden.",
-			icon: <Search />,
-			id: ID_ECOMMERCE_AND_WEBDESIGN,
-		},
-		{
-			title: "Agilität",
+			title: <>Agiles Projekt&shy;management</>,
 			content:
 				"Erste Ergebnisse liegen bereits nach einem 2-wöchigen Sprint vor.",
 			icon: <FastForward />,

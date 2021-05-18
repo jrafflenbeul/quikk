@@ -1,3 +1,4 @@
+import { BLOG_LINK } from "./../constants";
 import { MAGIC_NUMBER_243 } from "../constants";
 import removeMarkdown from "remove-markdown";
 import readingTime from "reading-time";
@@ -11,6 +12,3 @@ export const getPreviewText = (text = "", length = MAGIC_NUMBER_243) => {
 
 export const getReadingTimeInMinutes = (text = "") =>
 	Math.ceil(readingTime(removeMarkdown(text)).minutes);
-
-export const createBlogHrefFromSlug = (slug) =>
-	`/blog${!!slug ? `/${slug}` : ""}`;

@@ -51,3 +51,8 @@ export const getProjects = async () => {
 	const projects = await fetch("/projects");
 	return projects.sort(sortByUpdatedAt);
 };
+
+export const getProjectBySlug = async (slug) => {
+	const projects = await fetch(`/projects?slug=${slug}`);
+	return projects[0];
+};

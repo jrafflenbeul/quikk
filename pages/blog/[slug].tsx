@@ -8,7 +8,7 @@ import TitleAndDesc from "../../components/meta/TitleAndDesc";
 import AlignedUser from "../../components/misc/AlignedUser";
 import InternalLink from "../../components/misc/InternalLink";
 import { TextWithIcon } from "../../components/misc/WithIconHelper";
-import { breakpoints, GRID_GAP, SMALL_GAP } from "../../constants";
+import { BLOG_LINK, breakpoints, GRID_GAP, SMALL_GAP } from "../../constants";
 import { getPreviewText, getReadingTimeInMinutes } from "../../utils/blog";
 import { getArticleBySlug, getArticles } from "../../utils/strapi";
 import ThemeWrapper from "../../components/theme/ThemeWrapper";
@@ -61,7 +61,7 @@ const Article = ({
 								<InternalLink href="/">Home</InternalLink>
 							</Breadcrumbs.Item>
 							<Breadcrumbs.Item>
-								<InternalLink href="/blog">Blog</InternalLink>
+								<InternalLink href={BLOG_LINK}>Blog</InternalLink>
 							</Breadcrumbs.Item>
 							<Breadcrumbs.Item>Dieser Artikel</Breadcrumbs.Item>
 						</Breadcrumbs>
@@ -98,7 +98,7 @@ const Article = ({
 						</Grid.Container>
 					</Grid>
 					<Grid {...breakpoints}>
-						<Image alt={title} src={url} />
+						<Image alt={title} title={title} src={url} />
 					</Grid>
 					<Grid {...breakpoints} direction="column">
 						<ReactMarkdown>{content}</ReactMarkdown>
@@ -133,7 +133,7 @@ export async function getStaticProps(ctx) {
 
 export async function getStaticPaths() {
 	const articles = await getArticles();
-	const paths = articles.map(({ slug }) => `/blog/${slug}`);
+	const paths = articles.map(({ slug }) => `${BLOG_LINK}/${slug}`);
 
 	return {
 		paths,

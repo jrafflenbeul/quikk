@@ -1,18 +1,18 @@
-import { Grid, useTheme } from "@geist-ui/react";
+import { Grid, useTheme, Card } from "@geist-ui/react";
 import React from "react";
 import isMobile from "../hooks/isMobile";
 import Container from "./Container";
 import ThemeWrapper from "../theme/ThemeWrapper";
-import { MAGIC_NUMBER_99 } from "../../constants";
+import { HEADER_Z_INDEX } from "../../constants";
 import DesktopNav from "./header/DesktopNav";
 import MobileNav from "./header/MobileNav";
 import InternalLink from "../misc/InternalLink";
-import quikk from "../../assets/logos/logo_light_quikk_only.svg";
+import quikk from "../../assets/logos/logo_dark.svg";
 
 const Header = () => {
 	const mobile = isMobile();
 	const theme = useTheme();
-	const logoHeightInEm = mobile ? 2 : 1.5;
+	const logoHeightInEm = 2;
 
 	return (
 		<header
@@ -20,41 +20,41 @@ const Header = () => {
 				position: "fixed",
 				top: 0,
 				width: "100%",
-				zIndex: MAGIC_NUMBER_99,
+				zIndex: HEADER_Z_INDEX,
 			}}
 		>
-			<ThemeWrapper variant="dark">
+			<ThemeWrapper variant="light" style={{ background: "unset" }}>
 				<Container
 					style={{
-						padding: `${theme.layout.gapHalf} 0`,
+						padding: `${mobile ? theme.layout.gapHalf : theme.layout.gap}`,
 					}}
 				>
-					<Grid.Container direction="row" alignItems="center" justify="center">
-						<Grid xs md={0}></Grid>
-						<Grid
-							xs
-							style={{ textAlign: mobile ? "center" : null }}
-							justify={mobile ? "center" : null}
+					<Card>
+						<Grid.Container
+							direction="row"
+							alignItems="center"
+							justify="center"
 						>
-							<InternalLink href="/">
-								<img
-									src={quikk}
-									alt="QUIKK Software Logo"
-									title="QUIKK Software Logo"
-									style={{
-										height: `${logoHeightInEm}em`,
-										marginTop: `${logoHeightInEm / 6}em`,
-									}}
-								/>
-							</InternalLink>
-						</Grid>
-						<Grid xs md={0} justify={"flex-end"}>
-							<MobileNav />
-						</Grid>
-						<Grid xs={0} md justify="flex-end" alignItems="center">
-							<DesktopNav />
-						</Grid>
-					</Grid.Container>
+							<Grid xs>
+								<InternalLink href="/">
+									<img
+										src={quikk}
+										alt="QUIKK Software Logo"
+										title="QUIKK Software Logo"
+										style={{
+											height: `${logoHeightInEm}em`,
+										}}
+									/>
+								</InternalLink>
+							</Grid>
+							<Grid xs md={0} justify={"flex-end"}>
+								<MobileNav />
+							</Grid>
+							<Grid xs={0} md justify="flex-end" alignItems="center">
+								<DesktopNav />
+							</Grid>
+						</Grid.Container>
+					</Card>
 				</Container>
 			</ThemeWrapper>
 		</header>

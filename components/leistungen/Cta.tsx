@@ -42,7 +42,11 @@ const Cta = ({ title }) => {
 					</InternalLink>
 				</Grid>
 				<Grid {...{ xs: 24, sm: 24, md: 8, lg: 8 }}>
-					<Image src={joyce} alt={`${title} bei QUIKK Software`} />
+					<Image
+						src={joyce}
+						alt={`${title} bei QUIKK Software`}
+						title={`${title} bei QUIKK Software`}
+					/>
 				</Grid>
 			</Grid.Container>
 		</Container>

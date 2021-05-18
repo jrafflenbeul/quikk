@@ -5,7 +5,7 @@ import { GRID_GAP } from "../../constants";
 const Container = ({ children, spacing = false, bg = false, ...props }) => {
 	const theme = useTheme();
 	const gapWithUnit = theme.layout.gap;
-	const multipliedGap = `${gapWithUnit} * ${GRID_GAP}`;
+	const multipliedGap = `${gapWithUnit}`;
 
 	return (
 		<div className="quikkontainer" {...props}>
@@ -14,7 +14,8 @@ const Container = ({ children, spacing = false, bg = false, ...props }) => {
 				.quikkontainer {
 					height: 100%;
 					width: 100%;
-					padding: ${spacing ? `calc(${multipliedGap})` : 0} ${gapWithUnit};
+					padding: ${spacing ? `calc(${multipliedGap} * ${GRID_GAP})` : 0}
+						${gapWithUnit};
 					margin-right: auto;
 					margin-left: auto;
 					background: ${bg ? theme.palette.accents_8 : null};
@@ -23,7 +24,8 @@ const Container = ({ children, spacing = false, bg = false, ...props }) => {
 				}
 				@media (max-width: 575px) {
 					.quikkontainer {
-						max-width: calc(100vw - ${multipliedGap}) !important;
+						max-width: calc(100vw - ${multipliedGap} - 2rem) !important;
+						padding: unset 1rem !important;
 					}
 				}
 				@media (min-width: 576px) {
