@@ -26,7 +26,6 @@ const DefaultSEO = () => {
 		"Beratung",
 	];
 	const url: string = "https://QUIKK.de";
-	const favicon: string = "/favicon.ico";
 
 	return (
 		<>
@@ -56,7 +55,7 @@ const DefaultSEO = () => {
 				<meta property="audience" content="all" />
 				<meta httpEquiv="language" content={LANGUAGE} />
 				<meta name="language" content={LANGUAGE} />
-				<link rel="icon" href={favicon} />
+				<link rel="icon" href="/favicon.ico" />
 				<link rel="manifest" href="/manifest.json" />
 				<meta name="msapplication-TileColor" content="#ffffff" />
 				<meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
