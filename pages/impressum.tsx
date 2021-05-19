@@ -133,8 +133,15 @@ const impressum = () => {
 					<ExternalLink href="https://devicon.dev" color>
 						devicon.dev
 					</ExternalLink>{" "}
-					bereitgestellt werden. Alle weiteren Inhalte und Bilder stammen von
-					uns.
+					bereitgestellt werden. Hintergrundgrafiken stammen von{" "}
+					<ExternalLink href="https://www.blobmaker.app" color>
+						blobmaker.app
+					</ExternalLink>{" "}
+					und{" "}
+					<ExternalLink href="https://app.haikei.app" color>
+						haikei.app
+					</ExternalLink>
+					.
 				</p>
 				<h3>Umsetzung</h3>
 				<p>

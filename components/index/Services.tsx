@@ -94,8 +94,7 @@ const Services = () => {
 			<div
 				style={{
 					background: theme.palette.accents_8,
-					border: `1px solid ${theme.palette.accents_7}`,
-					borderWidth: "1px 0",
+					borderBottom: `1px solid ${theme.palette.accents_7}`,
 				}}
 			>
 				<Container spacing>

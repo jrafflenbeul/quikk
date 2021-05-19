@@ -6,6 +6,7 @@ import { BookOpen, RefreshCcw, Gift } from "@geist-ui/react-icons";
 import ThemeWrapper from "../theme/ThemeWrapper";
 import EnumerationList from "./EnumerationList";
 import TitleAndSubtitle from "./TitleAndSubtitle";
+import scene from "../../assets/backgrounds/scene.svg";
 
 const Work = ({
 	variant = "light",
@@ -15,7 +16,15 @@ const Work = ({
 	heading?: boolean;
 }) => {
 	return (
-		<ThemeWrapper variant={variant}>
+		<ThemeWrapper
+			variant={variant}
+			style={{
+				backgroundImage: `url(${scene})`,
+				backgroundSize: "cover",
+				backgroundPosition: "center",
+				backgroundRepeat: "no-repeat",
+			}}
+		>
 			<Container spacing>
 				<Grid.Container gap={GRID_GAP}>
 					{heading && (

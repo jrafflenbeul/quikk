@@ -9,7 +9,7 @@ import CompanyLinks from "./footer/CompanyLinks";
 import SocialLinks from "./footer/SocialLinks";
 import Container from "./Container";
 import isMobile from "../hooks/isMobile";
-import quikk from "../../assets/logos/logo_light.svg";
+import quikk from "../../assets/logos/logo_light_q.svg";
 
 const Footer = () => {
 	const theme = useTheme();
@@ -34,28 +34,24 @@ const Footer = () => {
 							</Grid>
 						))}
 					</Grid.Container>
-					{!mobile && (
-						<>
-							<Divider y={GRID_GAP}>
-								<img
-									src={quikk}
-									alt="QUIKK Software Logo"
-									title="QUIKK Software Logo"
-									style={{
-										height: "1.5em",
-									}}
-								/>
-							</Divider>
-							<Text small type="secondary">
-								Wir bei QUIKK Software & Webdesign UG (haftungsbeschränkt)
-								entwickeln seit Oktober 2020 individuelle Software, attraktive
-								Webdesigns und mobile Apps in Minden und liefern Ihnen
-								maßgeschneiderte Lösungen für digitale Herausforderungen. Wir
-								sind ein junges und agiles Tech-Startup mit Fokus auf Qualität
-								und Transparenz.
-							</Text>
-						</>
-					)}
+					<Divider y={GRID_GAP}>
+						<img
+							src={quikk}
+							alt="QUIKK Software Logo"
+							title="QUIKK Software Logo"
+							style={{
+								height: "1.5em",
+							}}
+						/>
+					</Divider>
+					<Text small type="secondary">
+						Wir bei QUIKK Software & Webdesign UG (haftungsbeschränkt)
+						entwickeln seit Oktober 2020 individuelle Software, attraktive
+						Webdesigns und mobile Apps in Minden und liefern Ihnen
+						maßgeschneiderte Lösungen für digitale Herausforderungen. Wir sind
+						ein junges und agiles Tech-Startup mit Fokus auf Qualität und
+						Transparenz.
+					</Text>
 				</Container>
 				<Grid.Container>
 					<Grid

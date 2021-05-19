@@ -9,7 +9,9 @@ import {
 } from "../../constants";
 import Container from "../layout/Container";
 import InternalLink from "../misc/InternalLink";
-import hero from "../../assets/logos/logo_dark_q.svg";
+import hero from "../../assets/logos/logo_light_q.svg";
+import blob from "../../assets/backgrounds/blob.svg";
+import wave from "../../assets/backgrounds/wave.svg";
 import getHeaderHeightInPx from "../hooks/getHeaderHeightInPx";
 import isMobile from "../hooks/isMobile";
 import ThemeWrapper from "../theme/ThemeWrapper";
@@ -19,7 +21,15 @@ const Hero = () => {
 	const mobile = isMobile();
 
 	return (
-		<ThemeWrapper variant="light">
+		<ThemeWrapper
+			variant="light"
+			style={{
+				backgroundImage: `url(${wave})`,
+				backgroundSize: "cover",
+				backgroundPosition: "center bottom",
+				backgroundRepeat: "no-repeat",
+			}}
+		>
 			<Container
 				style={{
 					display: "flex",
@@ -66,7 +76,17 @@ const Hero = () => {
 						</Grid.Container>
 					</Grid>
 					{!mobile && (
-						<Grid md={7} justify="center" alignItems="center" style={{}}>
+						<Grid
+							md={7}
+							justify="center"
+							alignItems="center"
+							style={{
+								backgroundImage: `url(${blob})`,
+								backgroundSize: "contain",
+								backgroundPosition: "center",
+								backgroundRepeat: "no-repeat",
+							}}
+						>
 							<Image
 								src={hero}
 								alt="QUIKK Software Logo"

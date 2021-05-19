@@ -12,6 +12,7 @@ import Container from "../layout/Container";
 import ThemeWrapper from "../theme/ThemeWrapper";
 import InternalLink from "./InternalLink";
 import Title from "./Title";
+import bottom from "../../assets/backgrounds/bottom.svg";
 
 const ContactRef = () => {
 	const router = useRouter();
@@ -34,9 +35,12 @@ const ContactRef = () => {
 		displayContactRef && (
 			<ThemeWrapper
 				style={{
-					background: theme.palette.accents_8,
-					border: `1px solid ${theme.palette.accents_7}`,
-					borderWidth: "1px 0",
+					backgroundColor: theme.palette.accents_8,
+					borderTop: `1px solid ${theme.palette.accents_7}`,
+					backgroundImage: `url(${bottom})`,
+					backgroundSize: "cover",
+					backgroundPosition: "center bottom",
+					backgroundRepeat: "no-repeat",
 				}}
 			>
 				<Container spacing>

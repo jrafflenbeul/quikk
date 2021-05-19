@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ThemeWrapper from "../components/theme/ThemeWrapper";
 import DefaultSEO from "../components/meta/DefaultSEO";
 import "inter-ui/inter.css";
@@ -10,14 +10,14 @@ import Footer from "../components/layout/Footer";
 import { CssBaseline } from "@geist-ui/react";
 import { LOADING } from "../constants";
 import ContactRef from "../components/misc/ContactRef";
+import getHeaderHeightInPx from "../components/hooks/getHeaderHeightInPx";
 
 const _app = ({ Component, pageProps }) => {
-	useEffect(() => {
+	if (typeof document !== "undefined") {
 		const main = document?.getElementsByTagName("main")[0];
-		const height = document?.getElementsByTagName("header")[0]?.offsetHeight;
-		main?.setAttribute("style", `padding-top: ${height}px`);
+		main?.setAttribute("style", `padding-top: ${getHeaderHeightInPx()}px`);
 		document?.body?.classList?.remove(LOADING);
-	}, []);
+	}
 
 	return (
 		<ThemeWrapper variant="dark">

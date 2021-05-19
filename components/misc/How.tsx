@@ -23,8 +23,7 @@ const How = () => {
 							Ihr Vorhaben von uns in die Tat umsetzen lässt. Während wir uns
 							bei der Entwicklung besonders auf die technische Komponente
 							konzentrieren, bringen Sie das spezifische Prozess- und
-							Domänenwissen mit. Dieses Vorgehen erlaubt es uns, Lösungen für
-							unterschiedlichste Branchen zu entwickeln.
+							Domänenwissen sowie die Erfahrung aus Ihrem Geschäft mit.
 						</Text>
 					</Grid>
 				</Grid.Container>

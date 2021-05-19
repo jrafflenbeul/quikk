@@ -20,8 +20,9 @@ const ThemeWrapper = ({
 		>
 			<section
 				style={{
-					background:
-						theme.palette[variant === "dark" ? "background" : "foreground"],
+					background: style
+						? null
+						: theme.palette[variant === "dark" ? "background" : "foreground"],
 					color:
 						theme.palette[variant === "dark" ? "foreground" : "background"],
 					...style,
