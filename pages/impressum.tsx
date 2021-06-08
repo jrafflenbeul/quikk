@@ -33,8 +33,8 @@ const impressum = () => {
 					<br />
 					E-Mail: {EMAIL}
 				</p>
-				<h2>Umsatzsteuer-ID</h2>
-				{/* <p>
+				{/* <h2>Umsatzsteuer-ID</h2>
+				 <p>
 					Umsatzsteuer-Identifikationsnummer gem&auml;&szlig; &sect; 27 a
 					Umsatzsteuergesetz:
 					<br />
