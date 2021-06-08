@@ -34,12 +34,12 @@ const impressum = () => {
 					E-Mail: {EMAIL}
 				</p>
 				<h2>Umsatzsteuer-ID</h2>
-				<p>
+				{/* <p>
 					Umsatzsteuer-Identifikationsnummer gem&auml;&szlig; &sect; 27 a
 					Umsatzsteuergesetz:
 					<br />
 					DE126024163
-				</p>
+				</p> */}
 				<h2>Redaktionell Verantwortlicher</h2>
 				<p>
 					Joyce Marvin Rafflenbeul

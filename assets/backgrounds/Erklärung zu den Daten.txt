@@ -1,0 +1,11 @@
+Erklärung zu den Daten.txt		Diese Datei :D
+Real					Hier befinden sich Monitoring-Daten in verschiedenen Ausführungen
+	plantnames.json			JSON Datei mit der Zuordnung plantId:PlantName
+	LimesysDataAlleLieferungen	Original Datenformat des Projektpartners 
+	LimesysDataParsedTmp		Daten zu einem verwendbaren Format geparst
+	LimesysDataCleanedTmp		Daten auf Zellebene umgerechnet, Differenzen zum Durchschnittsertrag innerhalb aller Analysegruppen gebildet (DcpD,DciD,DcuD)
+	LimesysAnalyzeOutput		Output von unüberwachten Lernverfahren, die .html kann man sich ansehen, um Anomalien zu untersuchen
+		*.log			Logs der Anomalieerkennung (unwichtig)
+		faultsCompact_*.csv	Zusammengefasste Anomalien, direkt mit Pandas verwendbar
+Simuliert				Hier befinden sich simulierte Daten für Schatten und Diodenfehler
+Codebeispiele				Ein paar Snippets aus meinem Code, die können, aber müssen nicht verwendet werden (dient als Hilfestellung)
