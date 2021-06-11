@@ -6,6 +6,7 @@ import { HEADER_LINKS, LEISTUNGEN_LINK } from "../../../constants";
 import { ChevronDown } from "@geist-ui/react-icons";
 import { services } from "../../../pages/leistungen";
 import InternalLink from "../../misc/InternalLink";
+import { createLeistungenHrefFromId } from "../../../utils/leistungen";
 
 const DesktopNav = () => {
 	const router = useRouter();
@@ -26,7 +27,7 @@ const DesktopNav = () => {
 		<div style={{ padding: `0 ${theme.layout.gap}` }} id="leistungen">
 			{services.map((service, i) => (
 				<Text key={i} small p>
-					<InternalLink href={`${LEISTUNGEN_LINK}/${service.id}`}>
+					<InternalLink href={createLeistungenHrefFromId(service.id)}>
 						{service.title}
 					</InternalLink>
 				</Text>

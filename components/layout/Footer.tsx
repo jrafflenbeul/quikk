@@ -14,7 +14,9 @@ import {
 	GRID_GAP,
 	IMPRESSUM_LINK,
 	KONTAKT_LINK,
+	MAGIC_NUMBER_42,
 	PHONE,
+	SEPARATOR,
 	SMALL_GAP,
 	SOCIAL,
 	SOCIAL_LINKS,
@@ -33,6 +35,7 @@ import ExternalLink from "../misc/ExternalLink";
 import QUIKKDivider from "../misc/Divider";
 import { Github, Instagram, Linkedin, Twitter } from "@geist-ui/react-icons";
 import ServiceLinks from "./footer/ServiceLinks";
+import q from "../../assets/logos/logo_dark_q.svg";
 
 const Footer = () => {
 	const mobile = isMobile();
@@ -64,6 +67,12 @@ const Footer = () => {
 				<Container spacing>
 					<Grid.Container gap={GRID_GAP} justify="space-between">
 						<Grid direction="column" alignItems="stretch" justify="flex-start">
+							<img
+								src={q}
+								style={{ width: `${MAGIC_NUMBER_42}px` }}
+								title={APPLICATION_NAME}
+								alt={APPLICATION_NAME}
+							/>
 							<QUIKKDivider center={false} />
 							<Text small span>
 								Schreiben Sie uns eine E-Mail an
@@ -180,8 +189,7 @@ const Footer = () => {
 									</Text>
 								</InternalLink>
 								<Text small style={{ color: "#eaeaea" }}>
-									{" "}
-									|{" "}
+									{` ${SEPARATOR} `}
 								</Text>
 								<InternalLink href={DATENSCHUTZ_LINK}>
 									<Text type="secondary" small>

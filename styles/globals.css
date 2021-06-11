@@ -80,3 +80,12 @@ header .card img {
 body.menu-open {
 	overflow: hidden;
 }
+
+nav .collapse {
+	border: unset !important;
+}
+
+header .collapse-group {
+	width: 100% !important;
+	padding: 0 !important;
+}
