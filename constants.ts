@@ -6,6 +6,7 @@ export const breakpoints_fill = { xs: 24, lg: 8 };
 
 export const LANGUAGE: string = "de";
 export const MENU_OPEN: string = "menu-open";
+export const CLICKAWAY: string = "quikk-clickaway";
 export const LOADING: string = "loading";
 export const BUTTON_ID: string = "theme-button";
 
@@ -23,7 +24,7 @@ export const BLOG_LINK = "/blog";
 export const PROJEKTE_LINK = "/projekte";
 
 export const ID_SOFTWARE_DEVELOPMENT = "softwareentwicklung";
-export const ID_ECOMMERCE_AND_WEBDESIGN = "ecommerce-und-webdesign";
+export const ID_ECOMMERCE_AND_WEBDESIGN = "ecommerce-und-webentwicklung";
 export const ID_MOBILE_APPS = "mobile-apps";
 export const ID_DATABASES_AND_APIS = "datenbanken-und-schnittstellen";
 export const ID_SCRUM = "scrum-agiles-projektmanagement";
@@ -35,6 +36,15 @@ export const HEADER_LINKS: { [text: string]: string } = {
 	Team: "/team",
 	Karriere: "/karriere",
 	Kontakt: KONTAKT_LINK,
+};
+
+export type SOCIAL = "Github" | "Instagram" | "Linkedin" | "Twitter";
+
+export const SOCIAL_LINKS: { [text in SOCIAL]: string } = {
+	Linkedin: "https://linkedin.com/company/quikk-software",
+	Github: "https://github.com/quikk-software",
+	Twitter: "https://twitter.com/quikk_software",
+	Instagram: "https://instagram.com/quikk_software",
 };
 
 // :^)

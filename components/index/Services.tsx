@@ -75,7 +75,7 @@ const Services = () => {
 			id: ID_DATABASES_AND_APIS,
 		},
 		{
-			title: "Webentwicklung und Webdesign",
+			title: "Webdesign und Webentwicklung",
 			content: "Ein Webauftritt, der genauso einzigartig ist, wie Sie selbst.",
 			icon: <Layout />,
 			id: ID_ECOMMERCE_AND_WEBDESIGN,

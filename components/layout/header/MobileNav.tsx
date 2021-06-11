@@ -1,23 +1,11 @@
-import {
-	Button,
-	Grid,
-	Text,
-	useClickAway,
-	useTheme,
-	Card,
-} from "@geist-ui/react";
+import { Button, Grid, useClickAway, useTheme, Card } from "@geist-ui/react";
 import React, { useState, useRef } from "react";
 import { Menu, X } from "@geist-ui/react-icons";
 import MobileMenuWrapper from "./MobileMenuWrapper";
 import CTA from "./CTA";
-import {
-	APPLICATION_NAME,
-	HEADER_LINKS,
-	HEADER_Z_INDEX,
-} from "../../../constants";
+import { CLICKAWAY, HEADER_LINKS, HEADER_Z_INDEX } from "../../../constants";
 import InternalLink from "../../misc/InternalLink";
 import Container from "../Container";
-import ThemeWrapper from "../../theme/ThemeWrapper";
 
 const MobileNav = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
@@ -25,10 +13,17 @@ const MobileNav = () => {
 	const theme = useTheme();
 
 	const openMenu = async () => {
+		const clickaway = document.createElement("div");
+		clickaway.setAttribute("id", CLICKAWAY);
+		clickaway.setAttribute("style", `z-index: ${HEADER_Z_INDEX - 1}`);
+
+		const body = Array.from(document.getElementsByTagName("body"))[0];
+		body.appendChild(clickaway);
 		setMenuOpen(true);
 	};
 
 	const closeMenu = async () => {
+		document.getElementById(CLICKAWAY)?.remove();
 		setMenuOpen(false);
 	};
 
@@ -53,7 +48,7 @@ const MobileNav = () => {
 			/>
 			<MobileMenuWrapper visible={menuOpen}>
 				<Container style={{ padding: 0, margin: 0 }}>
-					<Card shadow>
+					<Card shadow hoverable={false}>
 						<Grid.Container style={{ height: "100%" }} gap={0}>
 							<Grid
 								xs={24}

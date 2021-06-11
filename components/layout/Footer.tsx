@@ -1,70 +1,197 @@
-import { Text, Grid, useTheme, Description, Divider } from "@geist-ui/react";
+import {
+	Text,
+	Grid,
+	useTheme,
+	Description,
+	Divider,
+	Button,
+} from "@geist-ui/react";
 import React from "react";
-import { APPLICATION_NAME, GRID_GAP, SMALL_GAP } from "../../constants";
+import {
+	APPLICATION_NAME,
+	DATENSCHUTZ_LINK,
+	EMAIL,
+	GRID_GAP,
+	IMPRESSUM_LINK,
+	KONTAKT_LINK,
+	PHONE,
+	SMALL_GAP,
+	SOCIAL,
+	SOCIAL_LINKS,
+} from "../../constants";
 import ThemeWrapper from "../theme/ThemeWrapper";
 import LocationLinks from "./footer/LocationLinks";
-import LegalLinks from "./footer/LegalLinks";
-import ContactLinks from "./footer/ContactLinks";
 import CompanyLinks from "./footer/CompanyLinks";
-import SocialLinks from "./footer/SocialLinks";
 import Container from "./Container";
 import isMobile from "../hooks/isMobile";
-import quikk from "../../assets/logos/logo_light_q.svg";
+import InternalLink from "../misc/InternalLink";
+import { excludePathnamesForContactRef } from "../misc/ContactRef";
+import { useRouter } from "next/router";
+import Title from "../misc/Title";
+import { getMailToHref, getTelHref } from "../../utils/kontakt";
+import ExternalLink from "../misc/ExternalLink";
+import QUIKKDivider from "../misc/Divider";
+import { Github, Instagram, Linkedin, Twitter } from "@geist-ui/react-icons";
+import ServiceLinks from "./footer/ServiceLinks";
 
 const Footer = () => {
-	const theme = useTheme();
 	const mobile = isMobile();
+	const router = useRouter();
 
-	const contents = [
-		{ title: "Rechtliches", content: <LegalLinks /> },
-		{ title: "Kontakt", content: <ContactLinks /> },
-		{ title: "Unternehmen", content: <CompanyLinks /> },
-		{ title: "Social", content: <SocialLinks /> },
-		{ title: "Vor Ort", content: <LocationLinks /> },
-	];
+	const displayContactRef = excludePathnamesForContactRef.every(
+		(pathname) => pathname !== router.pathname,
+	);
+
+	const getIconForSocial = (social: SOCIAL) => {
+		switch (social) {
+			case "Github":
+				return <Github />;
+			case "Instagram":
+				return <Instagram />;
+			case "Linkedin":
+				return <Linkedin />;
+			case "Twitter":
+				return <Twitter />;
+			default:
+				break;
+		}
+	};
 
 	return (
 		<footer>
-			<ThemeWrapper variant="dark">
+			<ThemeWrapper variant="light">
+				{!displayContactRef && <Divider y={0} />}
 				<Container spacing>
-					<Grid.Container gap={SMALL_GAP}>
-						{contents.map(({ title, content }, i) => (
-							<Grid key={i} xs={12} md={24 / contents.length}>
-								<Description {...{ title, content }} />
-							</Grid>
-						))}
+					<Grid.Container gap={GRID_GAP} justify="space-between">
+						<Grid direction="column" alignItems="stretch" justify="flex-start">
+							<QUIKKDivider center={false} />
+							<Text small span>
+								Schreiben Sie uns eine E-Mail an
+								<Title h3>
+									<ExternalLink href={getMailToHref(EMAIL)}>
+										{EMAIL}
+									</ExternalLink>
+								</Title>
+								oder nutzen Sie{" "}
+								<Text b span>
+									<InternalLink href={KONTAKT_LINK}>
+										unser Kontaktformular
+									</InternalLink>
+								</Text>
+								.
+								<Text p>
+									Telefonisch erreichen Sie uns unter{" "}
+									<Text b>
+										(+49){" "}
+										<ExternalLink href={getTelHref(PHONE)}>
+											{PHONE}
+										</ExternalLink>
+									</Text>
+									.
+								</Text>
+							</Text>
+						</Grid>
+						<Grid>
+							<Grid.Container gap={GRID_GAP}>
+								<Grid direction="column">
+									<Description
+										{...{ title: "Unser Standort", content: <LocationLinks /> }}
+									/>
+								</Grid>
+								<Grid direction="column">
+									<Description
+										{...{ title: "Unternehmen", content: <CompanyLinks /> }}
+									/>
+								</Grid>
+								<Grid direction="column">
+									<Description
+										{...{ title: "Leistungen", content: <ServiceLinks /> }}
+									/>
+								</Grid>
+							</Grid.Container>
+						</Grid>
+						<Grid xs={24}>
+							<Grid.Container
+								gap={GRID_GAP}
+								alignItems="center"
+								justify="space-between"
+							>
+								<Grid
+									direction="column"
+									alignItems="flex-start"
+									justify="flex-start"
+								>
+									<Title h3 caps>
+										Software&shy;entwicklung
+									</Title>
+									<Text span>individuell für Mobile, Desktop und Web.</Text>
+								</Grid>
+								<Grid direction="row">
+									<Grid.Container gap={SMALL_GAP}>
+										{Object.entries(SOCIAL_LINKS).map(([key, value], i) => (
+											<Grid key={i}>
+												<ExternalLink href={value}>
+													<Button
+														// @ts-ignore
+														icon={getIconForSocial(key)}
+														auto
+														type="secondary-light"
+													/>
+												</ExternalLink>
+											</Grid>
+										))}
+									</Grid.Container>
+								</Grid>
+							</Grid.Container>
+						</Grid>
 					</Grid.Container>
-					<Divider y={GRID_GAP}>
-						<img
-							src={quikk}
-							alt="QUIKK Software Logo"
-							title="QUIKK Software Logo"
-							style={{
-								height: "1.5em",
-							}}
-						/>
-					</Divider>
-					<Text small type="secondary">
-						Wir bei QUIKK Software & Webdesign UG (haftungsbeschränkt)
-						entwickeln seit Oktober 2020 individuelle Software, attraktive
-						Webdesigns und mobile Apps in Minden und liefern Ihnen
-						maßgeschneiderte Lösungen für digitale Herausforderungen. Wir sind
-						ein junges und agiles Tech-Startup mit Fokus auf Qualität und
-						Transparenz.
-					</Text>
 				</Container>
-				<Grid.Container>
-					<Grid
-						xs={24}
-						style={{ backgroundColor: theme.palette.accents_1 }}
-						alignItems="center"
-						justify="center"
+				<Divider y={0} />
+				<Container>
+					<Grid.Container
+						direction={mobile ? "column-reverse" : "row"}
+						alignItems={mobile ? "center" : null}
 					>
-						<Text p type="secondary" small>
-							© 2020 - {new Date().getFullYear()} {APPLICATION_NAME}
-						</Text>
-					</Grid>
-				</Grid.Container>
+						<Grid
+							xs={24}
+							md={12}
+							alignItems="center"
+							justify={mobile ? null : "flex-start"}
+						>
+							<Text
+								p
+								type="secondary"
+								small
+								style={{ marginTop: mobile ? 0 : null }}
+							>
+								© 2020 - {new Date().getFullYear()} {APPLICATION_NAME}
+							</Text>
+						</Grid>
+						<Grid
+							alignItems="center"
+							justify={mobile ? null : "flex-end"}
+							xs={24}
+							md={12}
+						>
+							<Text>
+								<InternalLink href={IMPRESSUM_LINK}>
+									<Text type="secondary" small>
+										Impressum
+									</Text>
+								</InternalLink>
+								<Text small style={{ color: "#eaeaea" }}>
+									{" "}
+									|{" "}
+								</Text>
+								<InternalLink href={DATENSCHUTZ_LINK}>
+									<Text type="secondary" small>
+										Datenschutz
+									</Text>
+								</InternalLink>
+							</Text>
+						</Grid>
+					</Grid.Container>
+				</Container>
 			</ThemeWrapper>
 		</footer>
 	);

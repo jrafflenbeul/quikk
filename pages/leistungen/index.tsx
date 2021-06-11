@@ -104,7 +104,7 @@ export const services = [
 	},
 	{
 		src: webdesign,
-		title: "E-Commerce und Webdesign",
+		title: "E-Commerce und Webentwicklung",
 		content:
 			"Eigene Buchungs- und Bezahlsysteme, wahlweise mit eBay oder mobile.de Integration. Ein attraktiver und professioneller Auftritt im Web, der Sie und Ihr Unternehmen wiederspiegelt.",
 		id: ID_ECOMMERCE_AND_WEBDESIGN,

@@ -13,12 +13,18 @@ import ThemeWrapper from "../theme/ThemeWrapper";
 import InternalLink from "./InternalLink";
 import Title from "./Title";
 
+export const excludePathnamesForContactRef = [
+	KONTAKT_LINK,
+	IMPRESSUM_LINK,
+	DATENSCHUTZ_LINK,
+];
+
 const ContactRef = () => {
 	const router = useRouter();
 	const theme = useTheme();
 	const mobile = isMobile();
-	const excludePathnames = [KONTAKT_LINK, IMPRESSUM_LINK, DATENSCHUTZ_LINK];
-	const displayContactRef = excludePathnames.every(
+
+	const displayContactRef = excludePathnamesForContactRef.every(
 		(pathname) => pathname !== router.pathname,
 	);
 
