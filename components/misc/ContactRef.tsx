@@ -1,4 +1,5 @@
 import { Button, Grid, Text, useTheme } from "@geist-ui/react";
+import { ChevronRight } from "@geist-ui/react-icons";
 import { useRouter } from "next/router";
 import React from "react";
 import {
@@ -30,7 +31,12 @@ const ContactRef = () => {
 
 	const Cta = () => (
 		<InternalLink href={KONTAKT_LINK} style={{ width: mobile ? "100%" : null }}>
-			<Button type="success-light" style={{ width: mobile ? "100%" : null }}>
+			<Button
+				type="success-light"
+				style={{ width: mobile ? "100%" : null }}
+				auto
+				iconRight={<ChevronRight />}
+			>
 				Kontakt aufnehmen
 			</Button>
 		</InternalLink>
@@ -50,22 +56,23 @@ const ContactRef = () => {
 						<Grid
 							xs={24}
 							sm={24}
-							md
+							md={16}
 							alignItems="center"
 							justify="center"
 							direction="column"
 						>
-							<Title h2 caps>
-								Noch Fragen?
+							<Title h2>
+								Entdecken Sie die Vorteile&shy; unserer Individual&shy;entwicklung
 							</Title>
 							<Text
 								type="secondary"
 								p
 								style={{ marginBottom: mobile ? null : 0, width: "100%" }}
 							>
-								Kein Problem! In einem kostenlosen Erstgespräch am Telefon oder
-								über Microsoft Teams lernen wir uns kennen und erarbeiten
-								gemeinsam mit Ihnen ein Lösungskonzept für Ihre Ziele.
+								In einem kostenlosen Erstgespräch vor Ort - wahlweise auch am
+								Telefon oder über Microsoft Teams - lernen wir uns unverbindlich
+								kennen und erarbeiten gemeinsam mit Ihnen ein Lösungskonzept für
+								Ihre Ziele. Wir freuen uns auf Sie!
 							</Text>
 							{mobile && <Cta />}
 						</Grid>

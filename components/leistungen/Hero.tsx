@@ -25,8 +25,13 @@ const Hero = ({ title = "", subtitle = "", src = hero }) => {
 
 	const BackButton = () => (
 		<InternalLink style={{ width: mobile ? "100%" : null }} href={parent}>
-			<Button ghost style={{ width: mobile ? "100%" : null }}>
-				<ChevronLeft /> Zu den Leistungen
+			<Button
+				ghost
+				style={{ width: mobile ? "100%" : null }}
+				auto
+				icon={<ChevronLeft />}
+			>
+				Zu den Leistungen
 			</Button>
 		</InternalLink>
 	);

@@ -16,6 +16,7 @@ import getHeaderHeightInPx from "../hooks/getHeaderHeightInPx";
 import isMobile from "../hooks/isMobile";
 import ThemeWrapper from "../theme/ThemeWrapper";
 import TitleAndSubtitle from "../misc/TitleAndSubtitle";
+import { ChevronRight } from "@geist-ui/react-icons";
 
 const Hero = () => {
 	const mobile = isMobile();
@@ -61,14 +62,24 @@ const Hero = () => {
 						<Grid.Container gap={SMALL_GAP}>
 							<Grid xs={24} sm={24} md={12}>
 								<InternalLink href={KONTAKT_LINK} style={{ width: "100%" }}>
-									<Button type="success-light" style={{ width: "100%" }}>
-										Jetzt anfragen
+									<Button
+										type="success-light"
+										style={{ width: "100%" }}
+										auto
+										iconRight={<ChevronRight />}
+									>
+										Kostenlos anfragen
 									</Button>
 								</InternalLink>
 							</Grid>
 							<Grid xs={24} sm={24} md={12}>
 								<InternalLink href={LEISTUNGEN_LINK} style={{ width: "100%" }}>
-									<Button type="secondary-light" style={{ width: "100%" }}>
+									<Button
+										type="secondary-light"
+										style={{ width: "100%" }}
+										auto
+										iconRight={<ChevronRight />}
+									>
 										Unsere Leistungen
 									</Button>
 								</InternalLink>

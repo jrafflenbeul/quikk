@@ -1,11 +1,4 @@
-import {
-	Text,
-	Grid,
-	useTheme,
-	Description,
-	Divider,
-	Button,
-} from "@geist-ui/react";
+import { Text, Grid, Description, Divider, Button } from "@geist-ui/react";
 import React from "react";
 import {
 	APPLICATION_NAME,
@@ -91,9 +84,8 @@ const Footer = () => {
 								<Text p>
 									Telefonisch erreichen Sie uns unter{" "}
 									<Text b>
-										(+49){" "}
 										<ExternalLink href={getTelHref(PHONE)}>
-											{PHONE}
+											(+49) {PHONE}
 										</ExternalLink>
 									</Text>
 									.
@@ -155,8 +147,8 @@ const Footer = () => {
 						</Grid>
 					</Grid.Container>
 				</Container>
-				<Divider y={0} />
 				<Container>
+					<Divider y={0} />
 					<Grid.Container
 						direction={mobile ? "column-reverse" : "row"}
 						alignItems={mobile ? "center" : null}
@@ -173,7 +165,7 @@ const Footer = () => {
 								small
 								style={{ marginTop: mobile ? 0 : null }}
 							>
-								© 2020 - {new Date().getFullYear()} {APPLICATION_NAME}
+								© {new Date().getFullYear()} {APPLICATION_NAME}
 							</Text>
 						</Grid>
 						<Grid

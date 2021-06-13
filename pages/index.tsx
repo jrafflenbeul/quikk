@@ -22,9 +22,10 @@ const index = ({ articles, customers, projects }) => {
 			<Services />
 			<Introduction />
 			<Values heading />
-			<Work heading variant="dark" />
-			<CustomerSlider customers={customers} />
 			<How />
+			<Work heading />
+			<CustomerSlider customers={customers} />
+
 			<Corner article={articles[0]} project={projects[0]} />
 		</>
 	);

@@ -3,7 +3,7 @@ import React from "react";
 import isMobile from "../hooks/isMobile";
 import Container from "./Container";
 import ThemeWrapper from "../theme/ThemeWrapper";
-import { HEADER_Z_INDEX } from "../../constants";
+import { APPLICATION_NAME, HEADER_Z_INDEX } from "../../constants";
 import DesktopNav from "./header/DesktopNav";
 import MobileNav from "./header/MobileNav";
 import InternalLink from "../misc/InternalLink";
@@ -39,8 +39,8 @@ const Header = () => {
 								<InternalLink href="/">
 									<img
 										src={quikk}
-										alt="QUIKK Software Logo"
-										title="QUIKK Software Logo"
+										alt={APPLICATION_NAME}
+										title={APPLICATION_NAME}
 										style={{
 											height: `${logoHeightInEm}em`,
 										}}

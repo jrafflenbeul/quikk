@@ -11,14 +11,37 @@ import isMobile from "../hooks/isMobile";
 
 const Corner = ({ article, project }) => {
 	const mobile = isMobile();
+
+	const BlogButton = () => (
+		<Button
+			ghost
+			style={{ width: mobile ? "100%" : null }}
+			iconRight={<ChevronRight />}
+			auto
+		>
+			Alle Beiträge ansehen
+		</Button>
+	);
+
+	const ProjectButton = () => (
+		<Button
+			ghost
+			style={{ width: mobile ? "100%" : null }}
+			iconRight={<ChevronRight />}
+			auto
+		>
+			Alle Projekte ansehen
+		</Button>
+	);
+
 	return (
 		<ThemeWrapper variant="light">
 			<Container spacing>
 				<Grid.Container gap={GRID_GAP} alignItems="stretch">
 					<TitleAndSubtitle
-						title="Neues von QUIKK"
+						title="Neues von uns"
 						desc="Erhalten Sie weitere Einblicke in unsere Arbeit und stöbern Sie durch aktuelle Projekte oder neuste Blogbeiträge."
-						titleProps={{ h1: false, h2: true }}
+						titleProps={{ h1: false, h2: true, caps: true }}
 					/>
 					<Grid xs={24} md={12}>
 						<PreviewCard
@@ -34,9 +57,7 @@ const Corner = ({ article, project }) => {
 							href={PROJEKTE_LINK}
 							style={{ width: mobile ? "100%" : null }}
 						>
-							<Button ghost style={{ width: mobile ? "100%" : null }}>
-								Alle Projekte ansehen <ChevronRight />
-							</Button>
+							<ProjectButton />
 						</InternalLink>
 					</Grid>
 					<Grid xs={24} md={12}>
@@ -55,9 +76,7 @@ const Corner = ({ article, project }) => {
 							href={BLOG_LINK}
 							style={{ width: mobile ? "100%" : null }}
 						>
-							<Button ghost style={{ width: mobile ? "100%" : null }}>
-								Alle Beiträge ansehen <ChevronRight />
-							</Button>
+							<BlogButton />
 						</InternalLink>
 					</Grid>
 					<Grid xs={0} md={12} alignItems="center" justify="center">
@@ -65,9 +84,7 @@ const Corner = ({ article, project }) => {
 							href={PROJEKTE_LINK}
 							style={{ width: mobile ? "100%" : null }}
 						>
-							<Button ghost style={{ width: mobile ? "100%" : null }}>
-								Alle Projekte ansehen <ChevronRight />
-							</Button>
+							<ProjectButton />
 						</InternalLink>
 					</Grid>
 					<Grid xs={0} md={12} alignItems="center" justify="center">
@@ -75,9 +92,7 @@ const Corner = ({ article, project }) => {
 							href={BLOG_LINK}
 							style={{ width: mobile ? "100%" : null }}
 						>
-							<Button ghost style={{ width: mobile ? "100%" : null }}>
-								Alle Beiträge ansehen <ChevronRight />
-							</Button>
+							<BlogButton />
 						</InternalLink>
 					</Grid>
 				</Grid.Container>

@@ -32,8 +32,13 @@ const Paragraph = ({
 					{content}
 				</Text>
 				<InternalLink href={ctaHref} style={{ width: mobile ? "100%" : null }}>
-					<Button ghost style={{ width: mobile ? "100%" : null }}>
-						{cta} <ChevronRight />
+					<Button
+						ghost
+						style={{ width: mobile ? "100%" : null }}
+						auto
+						iconRight={<ChevronRight />}
+					>
+						{cta}
 					</Button>
 				</InternalLink>
 			</Grid>

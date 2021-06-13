@@ -34,8 +34,13 @@ const ServicePreview = ({
 			href={createLeistungenHrefFromId(id)}
 			style={{ width: mobile ? "100%" : null }}
 		>
-			<Button ghost style={{ width: mobile ? "100%" : null }}>
-				{cta} <ChevronRight />
+			<Button
+				ghost
+				style={{ width: mobile ? "100%" : null }}
+				auto
+				iconRight={<ChevronRight />}
+			>
+				{cta}
 			</Button>
 		</InternalLink>
 	);

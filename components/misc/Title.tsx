@@ -14,6 +14,8 @@ const Title = ({
 	const mobile = isMobile();
 	const isHeading =
 		props.h1 || props.h2 || props.h3 || props.h4 || props.h5 || props.h6;
+	const isBig = props.h1 || props.h2;
+
 	return (
 		<Text
 			style={{
@@ -27,7 +29,7 @@ const Title = ({
 				whiteSpace: "break-spaces",
 				hyphens: "auto",
 				fontSize: mobile && isHeading ? "175%" : null,
-				fontWeight: caps ? "bold" : null,
+				fontWeight: caps || isBig ? "bold" : null,
 				color: color ? theme.palette.foreground : null,
 			}}
 			{...props}
