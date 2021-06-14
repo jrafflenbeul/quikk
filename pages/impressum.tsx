@@ -1,5 +1,6 @@
 import React from "react";
 import Container from "../components/layout/Container";
+import TitleAndDesc from "../components/meta/TitleAndDesc";
 import ExternalLink from "../components/misc/ExternalLink";
 import ThemeWrapper from "../components/theme/ThemeWrapper";
 import { EMAIL, PHONE } from "../constants";
@@ -7,6 +8,7 @@ import { EMAIL, PHONE } from "../constants";
 const impressum = () => {
 	return (
 		<ThemeWrapper>
+			<TitleAndDesc title="Impressum" />
 			<Container spacing>
 				<h1>Impressum</h1>
 				<h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>

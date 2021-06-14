@@ -1,5 +1,6 @@
 import React from "react";
 import Container from "../components/layout/Container";
+import TitleAndDesc from "../components/meta/TitleAndDesc";
 import ExternalLink from "../components/misc/ExternalLink";
 import ThemeWrapper from "../components/theme/ThemeWrapper";
 import { EMAIL, PHONE } from "../constants";
@@ -7,6 +8,7 @@ import { EMAIL, PHONE } from "../constants";
 const datenschutz = () => {
 	return (
 		<ThemeWrapper>
+			<TitleAndDesc title="Datenschutz" />
 			<Container spacing>
 				<h1>Datenschutz&shy;erkl&auml;rung</h1>
 				<h2>1. Datenschutz auf einen Blick</h2>

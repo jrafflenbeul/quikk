@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://QUIKK.de
+Host: https://quikk.de/
 
 # Sitemaps
-Sitemap: https://QUIKK.de/sitemap.xml
+Sitemap: https://quikk.de/sitemap.xml

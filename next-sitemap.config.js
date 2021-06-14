@@ -1,5 +1,5 @@
 module.exports = {
-	siteUrl: "https://QUIKK.de",
+	siteUrl: "https://quikk.de/",
 	generateRobotsTxt: true,
-	exclude: ["/404", "/api/*"],
+	exclude: ["/404", "/api/*", "/datenschutz", "impressum"],
 };
