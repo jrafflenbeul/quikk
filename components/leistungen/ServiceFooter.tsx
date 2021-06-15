@@ -9,7 +9,7 @@ const ServiceFooter = () => {
 		<>
 			<How />
 			<Values heading />
-			<Work heading variant="dark" />
+			<Work heading variant="light" />
 			<Technologies />
 		</>
 	);

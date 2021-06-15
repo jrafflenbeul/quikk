@@ -21,7 +21,7 @@ const Mission = () => {
 						knifflig wird. In 2-wöchigen Sprints entwickeln wir inkrementelle
 						Zwischenversionen Ihrer Lösung und binden Sie aktiv in die
 						Mitgestaltung ein. So können wir Ihr Feedback optimal umsetzen und
-						dabei gleichzeitig völlig transparent und flexbiel agieren. Nach
+						dabei gleichzeitig völlig transparent und flexibel agieren. Nach
 						Projektabschluss erhalten Sie selbstverständlich eine Einweisung in
 						die Nutzung und den dokumentierten Code.
 					</Text>
