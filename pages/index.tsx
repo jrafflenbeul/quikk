@@ -8,42 +8,59 @@ import TitleAndDesc from "../components/meta/TitleAndDesc";
 import How from "../components/misc/How";
 import Values from "../components/misc/Values";
 import Work from "../components/misc/Work";
+import hero from "../assets/logos/logo_light_q.svg";
 import { SEPARATOR } from "../constants";
-import { getArticles, getCustomers, getProjects } from "../utils/strapi";
+import {
+  getArticles,
+  getColleagues,
+  getCustomers,
+  getProjects,
+} from "../utils/strapi";
+import ColleaguePreview from "../components/team/ColleaguePreview";
 
-const index = ({ articles, customers, projects }) => {
-	return (
-		<>
-			<TitleAndDesc
-				title={`QUIKK Software ${SEPARATOR} Softwareentwicklung und mobile Apps`}
-				description="Konzeption und Umsetzung von individueller Software in Minden. IT-Beratung, Webentwicklung und Anwendungsentwicklung für Mobile, Desktop und Web."
-			/>
-			<Hero />
-			<Services />
-			<Introduction />
-			<Values heading />
-			<How />
-			<Work heading />
-			<CustomerSlider customers={customers} />
-
-			<Corner article={articles[0]} project={projects[0]} />
-		</>
-	);
+const index = ({ articles, customers, projects, colleagues }) => {
+  return (
+    <>
+      <TitleAndDesc
+        title={`QUIKK Software ${SEPARATOR} Softwareentwicklung und mobile Apps`}
+        description="Konzeption und Umsetzung von individueller Software in Minden. IT-Beratung, Webentwicklung und Anwendungsentwicklung für Mobile, Desktop und Web."
+      />
+      <Hero
+        logo={hero}
+        description="Willkommen bei QUIKK Software."
+        titleAndSubtitle="Individuelle Softwareentwicklung und mobile Apps nach Ihren Vorstellungen."
+        text="Neben der klassischen Entwicklung von Web- und Desktopanwendungen,
+		mobilen Apps und E-Commerce-Lösungen bieten wir Ihnen außerdem
+		unsere Unterstützung bei der Planung, Konzeption und Umsetzung
+		Ihrer Softwareprojekte an."
+      />
+      <Services />
+      <Introduction />
+      <Values heading />
+      <How />
+      <Work heading />
+      <CustomerSlider customers={customers} />
+      <Corner article={articles[0]} project={projects[0]} />
+      <ColleaguePreview {...{ colleagues }} />
+    </>
+  );
 };
 
 export default index;
 
 export async function getStaticProps() {
-	const articles = await getArticles();
-	const customers = await getCustomers();
-	const projects = await getProjects();
-	const articlesToShowInPreview = 3;
-	return {
-		props: {
-			articles: articles.slice(0, articlesToShowInPreview),
-			customers,
-			projects: projects.slice(0, articlesToShowInPreview),
-		},
-		revalidate: 1,
-	};
+  const articles = await getArticles();
+  const customers = await getCustomers();
+  const projects = await getProjects();
+  const colleagues = await getColleagues();
+  const articlesToShowInPreview = 3;
+  return {
+    props: {
+      articles: articles.slice(0, articlesToShowInPreview),
+      customers,
+      projects: projects.slice(0, articlesToShowInPreview),
+      colleagues,
+    },
+    revalidate: 1,
+  };
 }

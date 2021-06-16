@@ -1,3 +1,6 @@
+import LogoBieleld from "./assets/logos/city/logo_light_bielefeld.svg";
+import LogoHannover from "./assets/logos/city/logo_light_hannover.svg";
+
 export const GRID_GAP: number = 4;
 export const LARGE_GAP: number = GRID_GAP * 2;
 export const SMALL_GAP: number = GRID_GAP / 4;
@@ -30,22 +33,49 @@ export const ID_DATABASES_AND_APIS = "datenbanken-und-schnittstellen";
 export const ID_SCRUM = "scrum-agiles-projektmanagement";
 
 export const HEADER_LINKS: { [text: string]: string } = {
-	Leistungen: LEISTUNGEN_LINK,
-	Projekte: PROJEKTE_LINK,
-	Blog: BLOG_LINK,
-	Team: "/team",
-	Karriere: "/karriere",
-	Kontakt: KONTAKT_LINK,
+  Leistungen: LEISTUNGEN_LINK,
+  Projekte: PROJEKTE_LINK,
+  Blog: BLOG_LINK,
+  Team: "/team",
+  Karriere: "/karriere",
+  Kontakt: KONTAKT_LINK,
 };
 
 export type SOCIAL = "Github" | "Instagram" | "Linkedin" | "Twitter";
 
 export const SOCIAL_LINKS: { [text in SOCIAL]: string } = {
-	Linkedin: "https://linkedin.com/company/quikk-software",
-	Github: "https://github.com/quikk-software",
-	Twitter: "https://twitter.com/quikk_software",
-	Instagram: "https://instagram.com/quikk_software",
+  Linkedin: "https://linkedin.com/company/quikk-software",
+  Github: "https://github.com/quikk-software",
+  Twitter: "https://twitter.com/quikk_software",
+  Instagram: "https://instagram.com/quikk_software",
 };
+
+export const cityData = [
+  {
+    slug: "bielefeld",
+    logo: LogoBieleld,
+    city: "Bielefeld",
+    federalState: "Nordrhein-Westfalen",
+    description: "Hallo Bielefeld!",
+    titleAndSubtitle:
+      "Individuelle Softwareentwicklung und mobile Apps für Bielefeld.",
+    text: "Wir begleiten Sie von der ersten Idee, über die Konzeptions- und Planungsphase bis hin zum fertigen Softwareprodukt. Unser Fokus liegt auf der Entwicklung von Desktop, Web und mobilen Anwendungen. Sie bringen die Idee, wir das technische Know-How.",
+    altImageText: "Stadt Bielefeld Logo",
+    titleImageText: "Stadt Bielefeld Logo",
+  },
+  {
+    slug: "hannover",
+    logo: LogoHannover,
+    city: "Hannover",
+    federalState: "Niedersachsen",
+    description: "Moin Hannover!",
+    titleAndSubtitle:
+      "Individuelle Softwareentwicklung und mobile Apps für Hannover.",
+    text: "Wir von QUIKK Software entwickeln Web- und Desktopanwendungen, mobile Apps und E-Commerce-Lösungen. Außerdem bieten wir Ihnen unsere Unterstützung bei der Planung, Konzeption und Umsetzung Ihrer IT- und Softwareprojekte an.",
+    altImageText: "Stadt Hannover Logo",
+    titleImageText: "Stadt Hannover Logo",
+  },
+];
 
 // :^)
 export const MAGIC_NUMBER_243 = 243;
