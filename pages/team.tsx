@@ -33,9 +33,8 @@ const team = ({ colleagues }) => {
 export default team;
 
 export async function getStaticProps() {
-	const colleagues = await getColleagues();
 	return {
-		props: { colleagues },
+		props: { colleagues: [] },
 		revalidate: 1,
 	};
 }

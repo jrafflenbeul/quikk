@@ -78,8 +78,8 @@ const kontakt = () => {
 					</ExternalLinkWithIcon>
 				</ContactText>
 				<ContactText>
-					<ExternalLinkWithIcon href={getTelHref(PHONE)} icon={<Phone />}>
-						{PHONE}
+					<ExternalLinkWithIcon href={PHONE} icon={<Phone />}>
+						Microsoft Teams
 					</ExternalLinkWithIcon>
 				</ContactText>
 				<ContactText>

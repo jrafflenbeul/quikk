@@ -49,7 +49,7 @@ const sendMail = async ({ name, email, message }) => {
 			to: `${email}, ${process.env.MAIL_CC}`,
 		},
 		subject: "Ihre Nachricht an QUIKK Software",
-		text: `Hallo ${name}!\n\nWir haben Ihre Kontaktanfrage erhalten und werden sie schnellstmöglich bearbeiten.\n\nIhre Nachricht lautet:\n${message}\n\nFreundliche Grüße,\nQUIKK Software & Webdesign UG (haftungsbeschränkt)\n\nH: www.quikk.de\nE: info@quikk.de\nT: +49 (0) 1523 390 2667\n\nGeschäftsführer: Joyce Marvin Rafflenbeul\nSitz: Hahler Straße 285, 32427 Minden\nHandelsregisternummer: HRB 17559\nRegistergericht: Amtsgericht Bad Oeynhausen`,
+		text: `Hallo ${name}!\n\nWir haben Ihre Kontaktanfrage erhalten und werden sie schnellstmöglich bearbeiten.\n\nIhre Nachricht lautet:\n${message}\n\nFreundliche Grüße,\nQUIKK Software GmbH\n\nH: www.quikk.de\nE: info@quikk.de\n\nGeschäftsführer: Joyce Marvin Rafflenbeul\nSitz: Hahler Straße 285, 32427 Minden\nHandelsregisternummer: HRB 17559\nRegistergericht: Amtsgericht Bad Oeynhausen`,
 	});
 	return info;
 };

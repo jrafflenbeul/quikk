@@ -143,14 +143,14 @@ const datenschutz = () => {
 					Website ist:
 				</p>
 				<p>
-					QUIKK Software &amp; Webdesign UG (haftungsbeschr&auml;nkt)
+					QUIKK Software GmbH
 					<br />
 					Hahler Stra&szlig;e 285
 					<br />
 					32427 Minden
 				</p>
 				<p>
-					Telefon: {PHONE}
+					Microsoft Teams: {PHONE}
 					<br />
 					E-Mail: {EMAIL}
 				</p>

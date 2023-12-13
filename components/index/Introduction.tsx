@@ -33,7 +33,7 @@ const Introduction = () => {
 					<IntroductionSection
 						src={code}
 						title="Mit Erfahrung"
-						content="Zunächst als Einzelunternehmer, seit Oktober 2020 im Team: Unser Geschäftsführer Joyce startet gemeinsam mit weiteren erfahrenen Informatikern voll durch und kann auf mehrjährige Erfahrung in der Web- und Anwendungsentwicklung zurückgreifen. Wir sind Ihr Ansprechpartner für agile Softwareentwicklung und Webdesign in Minden."
+						content="Unser Team vereint mehrjährige Erfahrung in der Softwareentwicklung durch verschiedene Tätigkeiten bei namhaften Banken, Vermögensverwaltern und Sofware-Dienstleistern. Wir unterstützen Sie zielgerichtet und effizient bei Ihren Projekten und setzen auf moderne Technologien und Methodiken in der Entwicklung."
 						alt="QUIKK Software Minden: Code, Softwareentwicklung, mobile Apps und Webdesign"
 						cta="Aktuelle Projekte ansehen"
 						ctaHref={PROJEKTE_LINK}

@@ -15,7 +15,7 @@ export const BUTTON_ID: string = "theme-button";
 
 export const APPLICATION_NAME: string = "QUIKK Software";
 export const EMAIL: string = "info@quikk.de";
-export const PHONE: string = "01523 390 2667";
+export const PHONE: string = "https://teams.microsoft.com/l/chat/0/0?users=jrafflenbeul@eprox-gmbh.de";
 
 export const SEPARATOR: string = " - ";
 
@@ -34,10 +34,6 @@ export const ID_SCRUM = "scrum-agiles-projektmanagement";
 
 export const HEADER_LINKS: { [text: string]: string } = {
   Leistungen: LEISTUNGEN_LINK,
-  Projekte: PROJEKTE_LINK,
-  Blog: BLOG_LINK,
-  Team: "/team",
-  Karriere: "/karriere",
   Kontakt: KONTAKT_LINK,
 };
 

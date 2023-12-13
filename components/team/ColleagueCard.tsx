@@ -79,7 +79,6 @@ const ColleagueCard = ({
           <Grid xs={24} alignItems="center" justify="center" direction="column">
             <Avatar
               src={avatar}
-              size="large"
               alt={`${name} (${position} bei QUIKK Software)`}
               isSquare
             />

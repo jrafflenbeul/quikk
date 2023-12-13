@@ -25,13 +25,6 @@ const CTA = ({ fit = true }: { fit?: boolean }) => {
 				onClick={() => handleUrlClick(getMailToHref(EMAIL))}
 				aria-label="QUIKK Software schreiben"
 			/>
-			<Button
-				icon={<Phone />}
-				auto
-				onClick={() => handleUrlClick(getTelHref(PHONE))}
-				aria-label="QUIKK Software anrufen"
-				id={BUTTON_ID}
-			/>
 		</ButtonGroup>
 	);
 };
