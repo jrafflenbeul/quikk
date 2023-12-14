@@ -1,6 +1,6 @@
 import { Grid } from "@geist-ui/react";
 import React from "react";
-import { KONTAKT_LINK, LARGE_GAP, PROJEKTE_LINK } from "../../constants";
+import { KONTAKT_LINK, LARGE_GAP } from "../../constants";
 import Container from "../layout/Container";
 import joyce from "../../assets/images/joyce_landing.jpg";
 import minden from "../../assets/images/minden.jpg";
@@ -18,8 +18,6 @@ const Introduction = () => {
 						title="Ihr Partner"
 						content="QUIKK Software aus Minden konzipiert und entwickelt individuelle Softwarelösungen, mobile Apps und Webdesigns nach Ihren Vorstellungen. Unseren Fokus setzen wir dabei auf agile Softwareentwicklung, eine transparente Kommunikation und eine strukturierte Arbeitsweise, um Ihnen sauberes und wartbares Coding zu liefern. Ohne Wenn und Aber."
 						alt="QUIKK Software Minden Geschäftsführer Joyce Marvin Rafflenbeul"
-						cta="Unser Team kennenlernen"
-						ctaHref="/team"
 					/>
 					<IntroductionSection
 						src={minden}
@@ -35,8 +33,6 @@ const Introduction = () => {
 						title="Mit Erfahrung"
 						content="Mit unserer mehrjährigen Berufserfahrung bei namhaften Banken, Vermögensverwaltern und Softwaredienstleistern können wir auf eine Vielzahl erfolgreich abgeschlossener Projekte zurückblicken, aus welchen wir stetig neues Wissen schöpfen und durch unser interdisziplinäres Team in Ihre Projekte einfließen lassen."
 						alt="QUIKK Software Minden: Code, Softwareentwicklung, mobile Apps und Webdesign"
-						cta="Aktuelle Projekte ansehen"
-						ctaHref={PROJEKTE_LINK}
 					/>
 				</Grid.Container>
 			</Container>
