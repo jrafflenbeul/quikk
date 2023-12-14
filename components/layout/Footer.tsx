@@ -56,6 +56,7 @@ const Footer = () => {
 	return (
 		<footer>
 			<ThemeWrapper variant="light">
+				{/* @ts-ignore */}
 				{!displayContactRef && <Divider y={0} />}
 				<Container spacing>
 					<Grid.Container gap={GRID_GAP} justify="space-between">
@@ -82,10 +83,10 @@ const Footer = () => {
 								</Text>
 								.
 								<Text p>
-									Telefonisch erreichen Sie uns unter{" "}
+									Sie erreichen uns auch unter{" "}
 									<Text b>
-										<ExternalLink href={getTelHref(PHONE)}>
-											(+49) {PHONE}
+										<ExternalLink href={PHONE}>
+											Microsoft Teams
 										</ExternalLink>
 									</Text>
 									.
@@ -148,6 +149,7 @@ const Footer = () => {
 					</Grid.Container>
 				</Container>
 				<Container>
+					{/* @ts-ignore */}
 					<Divider y={0} />
 					<Grid.Container
 						direction={mobile ? "column-reverse" : "row"}

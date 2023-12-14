@@ -39,9 +39,6 @@ const index = ({ articles, customers, projects, colleagues }) => {
       <Values heading />
       <How />
       <Work heading />
-      <CustomerSlider customers={customers} />
-      <Corner article={articles[0]} project={projects[0]} />
-      <ColleaguePreview {...{ colleagues }} />
     </>
   );
 };
@@ -49,17 +46,12 @@ const index = ({ articles, customers, projects, colleagues }) => {
 export default index;
 
 export async function getStaticProps() {
-  const articles = await getArticles();
-  const customers = await getCustomers();
-  const projects = await getProjects();
-  const colleagues = await getColleagues();
-  const articlesToShowInPreview = 3;
   return {
     props: {
-      articles: articles.slice(0, articlesToShowInPreview),
-      customers,
-      projects: projects.slice(0, articlesToShowInPreview),
-      colleagues,
+      articles: [],
+      customers: [],
+      projects: [],
+      colleagues: [],
     },
     revalidate: 1,
   };

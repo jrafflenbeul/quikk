@@ -76,6 +76,7 @@ const MobileNav = () => {
 										{Object.entries(HEADER_LINKS).map(([key, value], i) =>
 											key !== "Leistungen" ? (
 												<>
+													{/* @ts-ignore */}
 													{i > 0 && <Divider y={0} />}
 													<InternalLink
 														href={value}

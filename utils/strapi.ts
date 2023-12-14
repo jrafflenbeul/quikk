@@ -24,35 +24,35 @@ const sortByNameAsc = (a, b) => String(a.name).localeCompare(String(b.name));
 
 export const getColleagues = async () => {
 	const colleagues = await fetch("/colleagues");
-	return colleagues.sort(sortByDisplayAsc);
+	return [];
 };
 
 export const getJobs = async () => {
-	const jobs = await fetch("/jobs");
-	return jobs.sort(sortByDisplayAsc);
+	// const jobs = await fetch("/jobs");
+	return [];
 };
 
 export const getArticles = async () => {
-	const articles = await fetch("/articles");
-	return articles.sort(sortByUpdatedAt);
+	// const articles = await fetch("/articles");
+	return [];
 };
 
 export const getArticleBySlug = async (slug) => {
-	const articles = await fetch(`/articles?slug=${slug}`);
-	return articles[0];
+	// const articles = await fetch(`/articles?slug=${slug}`);
+	return {};
 };
 
 export const getCustomers = async () => {
-	const customers = await fetch("/customers");
-	return customers.sort(sortByNameAsc);
+	// const customers = await fetch("/customers");
+	return [];
 };
 
 export const getProjects = async () => {
-	const projects = await fetch("/projects");
-	return projects.sort(sortByUpdatedAt);
+	// const projects = await fetch("/projects");
+	return [];
 };
 
 export const getProjectBySlug = async (slug) => {
-	const projects = await fetch(`/projects?slug=${slug}`);
-	return projects[0];
+	// const projects = await fetch(`/projects?slug=${slug}`);
+	return {};
 };

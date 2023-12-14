@@ -16,6 +16,7 @@ const WithIcon = ({ icon, children }) => {
 	return (
 		<>
 			{React.cloneElement(icon, { size: ".8em" })}
+			{/* @ts-ignore */}
 			<Spacer x={MAGIC_NUMBER_0_243} y={0} />
 			{children}
 		</>

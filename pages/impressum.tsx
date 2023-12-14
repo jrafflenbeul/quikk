@@ -13,7 +13,7 @@ const impressum = () => {
 				<h1>Impressum</h1>
 				<h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
 				<p>
-					QUIKK Software &amp; Webdesign UG (haftungsbeschr&auml;nkt)
+					QUIKK Software GmbH
 					<br />
 					Hahler Stra&szlig;e 285
 					<br />
@@ -31,7 +31,7 @@ const impressum = () => {
 				</p>
 				<h2>Kontakt</h2>
 				<p>
-					Telefon: {PHONE}
+					Microsoft Teams: {PHONE}
 					<br />
 					E-Mail: {EMAIL}
 				</p>
