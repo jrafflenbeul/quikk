@@ -33,7 +33,7 @@ const Introduction = () => {
 					<IntroductionSection
 						src={code}
 						title="Mit Erfahrung"
-						content="Unser Team vereint mehrjährige Erfahrung in der Softwareentwicklung durch verschiedene Tätigkeiten bei namhaften Banken, Vermögensverwaltern und Sofware-Dienstleistern. Wir unterstützen Sie zielgerichtet und effizient bei Ihren Projekten und setzen auf moderne Technologien und Methodiken in der Entwicklung."
+						content="Mit unserer mehrjährigen Berufserfahrung bei namhaften Banken, Vermögensverwaltern und Softwaredienstleistern können wir auf eine Vielzahl erfolgreich abgeschlossener Projekte zurückblicken, aus welchen wir stetig neues Wissen schöpfen und durch unser interdisziplinäres Team in Ihre Projekte einfließen lassen."
 						alt="QUIKK Software Minden: Code, Softwareentwicklung, mobile Apps und Webdesign"
 						cta="Aktuelle Projekte ansehen"
 						ctaHref={PROJEKTE_LINK}
