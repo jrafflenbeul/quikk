@@ -106,18 +106,13 @@ export const services = [
 		src: webdesign,
 		title: "E-Commerce und Webentwicklung",
 		content:
-			"Eigene Buchungs- und Bezahlsysteme, wahlweise mit eBay oder mobile.de Integration. Ein attraktiver und professioneller Auftritt im Web, der Sie und Ihr Unternehmen wiederspiegelt.",
+			"Eigene Buchungs- und Bezahlsysteme mit Integration in externe Systeme.",
 		id: ID_ECOMMERCE_AND_WEBDESIGN,
 		use: [
 			{
-				title: "Professionell, individuell, einzigartig",
-				content:
-					"Mehr als nur eine Visitenkarte im Web. Gemeinsam mit Ihnen gehen wir auf konkrete Vorstellungen und Wünsche ein, damit Sie sich im Internet optimal präsentieren können. Wir liefern Ihnen eine Webpräsenz, die so einzigartig ist, wie Sie selbst.",
-			},
-			{
 				title: "Eigene Bestell- und Buchungssysteme",
 				content:
-					"Sie sind auf der Suche nach einem eigenen Bestell- oder Buchungssystem für Ihren Online Shop, Ihre Gastronomie oder Ihren Lieferservice? Bei uns bekommen Sie eine kostengünstige und sichere Lösung, die sich auf Wunsch in Ihre Website integrieren lässt.",
+					"Sie sind auf der Suche nach einem eigenen Bestell- oder Buchungssystem für Ihren Online Shop, Ihre Gastronomie oder Ihren Lieferservice? Wir bieten individuelle Lösungen mit innovativen Prozessen zur Erweiterung Ihrer Geschäftsbereiche.",
 			},
 			{
 				title: "Vollständige E-Commerce Umsetzung",
@@ -130,14 +125,9 @@ export const services = [
 					"Die Zeiten von Websites mit statischen Inhalten sind vorbei. Wir kümmern uns darum, dass Ihre Website wieder ansprechend wirkt und binden dynamische Inhalte, wie z.B. einen Blog, eine Projektübersicht oder Terminübersichten mit WordPress oder unserem eigenen CMS ein.",
 			},
 			{
-				title: "Attraktive UI/UX",
+				title: "Responsive, HTTPS, SEO",
 				content:
-					"Sauberes Coding gepaart mit einer modernen Designsprache, die Ihrem Geschmack folgt. Damit hat Ihre Website einen Wiedererkennungswert und bleibt zukünftigen Kunden im Kopf.",
-			},
-			{
-				title: "Responsive, HTTPS, SEO, kostenloses Hosting",
-				content:
-					"Natürlich sind unsere Weblösungen vollständig responsive und für alle Endgeräte optimiert. Wir bieten außerdem ein kostenloses SSL-Zertifikat, kostenloses Hosting und technisches SEO an, damit Sie sofort und ohne Kopfschmerzen durchstarten können.",
+					"Natürlich sind unsere Weblösungen vollständig responsive und für alle Endgeräte optimiert. Wir bieten außerdem technische Suchmaschinenoptimierung (SEO) an, damit Sie unmittelbar im Web gefunden werden können.",
 			},
 		],
 	},

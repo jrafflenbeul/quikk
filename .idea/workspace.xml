@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c619520d-a91d-4ab9-8f01-078522e0584d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_07_12_23,_12_12_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_07_12_23__12_12__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/index/Introduction.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/index/Introduction.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/index/Services.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/index/Services.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/leistungen/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/leistungen/Hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/leistungen/Technologies.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/leistungen/Technologies.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/leistungen/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/leistungen/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +63,7 @@
       <workItem from="1702544335207" duration="254000" />
       <workItem from="1702544622688" duration="1004000" />
       <workItem from="1702545762003" duration="436000" />
-      <workItem from="1707904900881" duration="281000" />
+      <workItem from="1707904900881" duration="752000" />
     </task>
     <servers />
   </component>
