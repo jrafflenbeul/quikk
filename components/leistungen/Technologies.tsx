@@ -48,14 +48,12 @@ const technologies = () => {
 							</Grid>
 							<Grid xs={24} md={12}>
 								<Text type="secondary" style={{ marginBottom: 0 }}>
-									Nutzeroberflächen und Webdesigns realisieren wir mit React
-									(HTML/CSS). Für unsere Webanwendungen verwenden wir Next.js,
+									Für unsere Webanwendungen verwenden wir React und Next.js,
 									Desktopanwendungen werden mit Electron oder alternativ als
 									Progressive Web App (PWA) erstellt. Für mobile Anwendungen
 									kommen React Native, Flutter oder PWA zum Einsatz. Mit Node.js
 									und Express.js bauen wir unsere Server und REST
-									Schnittstellen, Daten und Inhalte werden über MongoDB
-									persistiert.
+									Schnittstellen.
 								</Text>
 							</Grid>
 						</Grid.Container>
