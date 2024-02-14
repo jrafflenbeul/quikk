@@ -16,7 +16,7 @@ const Introduction = () => {
 					<IntroductionSection
 						src={joyce}
 						title="Ihr Partner"
-						content="QUIKK Software aus Minden konzipiert und entwickelt individuelle Softwarelösungen, mobile Apps und Webdesigns nach Ihren Vorstellungen. Unseren Fokus setzen wir dabei auf agile Softwareentwicklung, eine transparente Kommunikation und eine strukturierte Arbeitsweise, um Ihnen sauberes und wartbares Coding zu liefern. Ohne Wenn und Aber."
+						content="QUIKK Software aus Minden konzipiert und entwickelt individuelle Softwarelösungen, Webanwendungen & mobile Apps nach Ihren Vorstellungen. Unseren Fokus setzen wir dabei auf agile Softwareentwicklung, eine transparente Kommunikation und eine strukturierte Arbeitsweise, um Ihnen sauberes und wartbares Coding zu liefern. Ohne Wenn und Aber."
 						alt="QUIKK Software Minden Geschäftsführer Joyce Marvin Rafflenbeul"
 					/>
 					<IntroductionSection
@@ -32,7 +32,7 @@ const Introduction = () => {
 						src={code}
 						title="Mit Erfahrung"
 						content="Mit unserer mehrjährigen Berufserfahrung bei namhaften Banken, Vermögensverwaltern und Softwaredienstleistern können wir auf eine Vielzahl erfolgreich abgeschlossener Projekte zurückblicken, aus welchen wir stetig neues Wissen schöpfen und durch unser interdisziplinäres Team in Ihre Projekte einfließen lassen."
-						alt="QUIKK Software Minden: Code, Softwareentwicklung, mobile Apps und Webdesign"
+						alt="QUIKK Software Minden: Code, Softwareentwicklung, mobile Apps und Webanwendungen"
 					/>
 				</Grid.Container>
 			</Container>
