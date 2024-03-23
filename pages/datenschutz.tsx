@@ -150,7 +150,9 @@ const datenschutz = () => {
 					32427 Minden
 				</p>
 				<p>
-					Microsoft Teams: {PHONE}
+					<ExternalLink href={PHONE}>
+						Microsoft Teams
+					</ExternalLink>
 					<br />
 					E-Mail: {EMAIL}
 				</p>

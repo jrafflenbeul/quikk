@@ -25,13 +25,18 @@ const impressum = () => {
 					Registergericht: Amtsgericht Bad Oeynhausen
 				</p>
 				<p>
+					Umsatzsteuer-Identifikationsnummer: DE339709992
+				</p>
+				<p>
 					<strong>Vertreten durch:</strong>
 					<br />
 					Joyce Marvin Rafflenbeul
 				</p>
 				<h2>Kontakt</h2>
 				<p>
-					Microsoft Teams: {PHONE}
+					<ExternalLink href={PHONE}>
+						Microsoft Teams
+					</ExternalLink>
 					<br />
 					E-Mail: {EMAIL}
 				</p>
