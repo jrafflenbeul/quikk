@@ -107,7 +107,7 @@ const Hero = ({
                 alt={altImageText}
                 title={titleImageText}
                 height={MAGIC_NUMBER_243}
-                style={{ filter: !logoBgActive && "grayscale(1)" }}
+                style={{ filter: !logoBgActive && "grayscale(1)", padding: "2rem" }}
               />
             </Grid>
           )}
